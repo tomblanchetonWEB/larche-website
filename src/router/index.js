@@ -4,6 +4,9 @@ import LandingPage from '../views/LandingPage.vue'
 import MenuPage from '../views/MenuPage.vue'
 import EventsPage from '../views/EventsPage.vue'
 import ContactPage from '../views/ContactPage.vue'
+import TermsPage from '../views/TermsPage.vue'
+import LegalPage from '../views/LegalPage.vue'
+import PrivacyPage from '../views/PrivacyPage.vue'
 
 const routes = [
   {
@@ -29,6 +32,24 @@ const routes = [
     name: 'Contact',
     component: ContactPage,
     meta: { titleKey: 'pageTitle.contact' },
+  },
+  {
+    path: '/privacy',
+    name: 'Privacy',
+    component: PrivacyPage,
+    meta: { titleKey: 'pageTitle.privacy' },
+  },
+  {
+    path: '/legal',
+    name: 'Legal',
+    component: LegalPage,
+    meta: { titleKey: 'pageTitle.legal' },
+  },
+  {
+    path: '/terms',
+    name: 'Terms',
+    component: TermsPage,
+    meta: { titleKey: 'pageTitle.terms' },
   },
   {
     path: '/:pathMatch(.*)*',

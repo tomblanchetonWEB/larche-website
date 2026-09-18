@@ -9,7 +9,10 @@
     "home": "L'Arche - Accueil",
     "menu": "L'Arche - La Carte",
     "events": "L'Arche - Événements",
-    "contact": "L'Arche - Contact"
+    "contact": "L'Arche - Contact",
+    "legal": "L'Arche - Mentions Légales",
+    "privacy": "L'Arche - Politique de Confidentialité",
+    "terms": "L'Arche - Conditions d'Utilisation"
   },
   "hero": {
     "title": "LE BAR IMMERSIF",

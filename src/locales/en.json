@@ -9,7 +9,10 @@
     "home": "L'Arche - Home",
     "menu": "L'Arche - Menu",
     "events": "L'Arche - Events",
-    "contact": "L'Arche - Contact"
+    "contact": "L'Arche - Contact",
+    "legal": "L'Arche - Legal Mentions",
+    "privacy": "L'Arche - Privacy Policy",
+    "terms": "L'Arche - Terms of Service"
   },
   "hero": {
     "title": "THE IMMERSIVE BAR",

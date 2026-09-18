@@ -69,7 +69,7 @@ onMounted(() => {
           <div>
             <span class="font-display text-xl md:text-2xl font-bold tracking-widest text-arche-green dark:text-arche-beige">{{ t('nav.logo') }}</span>
           </div>
-          
+
           <div class="flex items-center gap-4 mt-2">
             <button @click="toggleTheme" class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
               <Moon v-if="isDark" class="w-4 h-4" />
@@ -92,12 +92,12 @@ onMounted(() => {
             <router-link to="/events" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ t('nav.events') }}</router-link>
             <router-link to="/contact" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ t('nav.contact') }}</router-link>
           </div>
-          
+
           <div class="flex flex-col gap-4">
             <h3 class="text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-arche-beige/50 mb-2">{{ t('footer.legal') }}</h3>
-            <a href="#" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ t('footer.terms') }}</a>
-            <a href="#" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ t('footer.privacy') }}</a>
-            <a href="#" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ t('footer.legalNotice') }}</a>
+            <router-link to="/terms" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ t('footer.terms') }}</router-link>
+            <router-link to="/privacy" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ t('footer.privacy') }}</router-link>
+            <router-link to="/legal" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ t('footer.legalNotice') }}</router-link>
           </div>
         </div>
       </div>
