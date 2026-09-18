@@ -43,7 +43,7 @@ onMounted(() => {
       <div class="hidden md:flex items-center justify-center gap-12 flex-1">
         <router-link to="/menu" class="text-base font-medium text-white/95 drop-shadow-md hover:text-white transition-colors">{{ t('nav.menu') }}</router-link>
         <router-link to="/events" class="text-base font-medium text-white/95 drop-shadow-md hover:text-white transition-colors">{{ t('nav.events') }}</router-link>
-        <router-link to="/about" class="text-base font-medium text-white/95 drop-shadow-md hover:text-white transition-colors">{{ t('nav.about') }}</router-link>
+        <router-link to="/contact" class="text-base font-medium text-white/95 drop-shadow-md hover:text-white transition-colors">{{ t('nav.contact') }}</router-link>
       </div>
 
       <div class="flex-1 flex items-center justify-end gap-6">
@@ -59,25 +59,40 @@ onMounted(() => {
       </div>
     </nav>
 
-    <main class="grow w-full">
+    <main class="flex-grow w-full">
       <router-view />
     </main>
 
     <footer class="w-full bg-arche-beige dark:bg-surface-dark text-gray-800 dark:text-arche-beige py-16 px-8 md:px-12 border-t border-black/5 dark:border-white/5 transition-colors duration-300">
       <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12">
         <div class="flex flex-col gap-6 max-w-sm justify-between">
-          <span class="font-display text-4xl font-bold tracking-widest text-arche-green dark:text-arche-beige">{{ t('nav.logo') }}</span>
-          <p class="text-gray-500 dark:text-arche-beige/60 text-xs mt-auto">{{ t('footer.copyright') }}</p>
+          <div>
+            <span class="font-display text-xl md:text-2xl font-bold tracking-widest text-arche-green dark:text-arche-beige">{{ t('nav.logo') }}</span>
+          </div>
+          
+          <div class="flex items-center gap-4 mt-2">
+            <button @click="toggleTheme" class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+              <Moon v-if="isDark" class="w-4 h-4" />
+              <Sun v-else class="w-4 h-4" />
+            </button>
+
+            <button @click="toggleLanguage" class="flex items-center gap-2 px-4 h-10 rounded-full border border-gray-300 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-xs font-bold uppercase tracking-wider">
+              <Globe class="w-4 h-4" />
+              <span>{{ locale }}</span>
+            </button>
+          </div>
+
+          <p class="text-gray-500 dark:text-arche-beige/60 text-xs mt-4">{{ t('footer.copyright') }}</p>
         </div>
 
         <div class="flex flex-wrap gap-16 md:gap-24">
           <div class="flex flex-col gap-4">
             <h3 class="text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-arche-beige/50 mb-2">{{ t('footer.explorer') }}</h3>
-            <router-link to="/about" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ t('nav.about') }}</router-link>
+            <router-link to="/menu" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ t('nav.menu') }}</router-link>
             <router-link to="/events" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ t('nav.events') }}</router-link>
-            <router-link to="/contact" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ t('footer.contact') }}</router-link>
+            <router-link to="/contact" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ t('nav.contact') }}</router-link>
           </div>
-
+          
           <div class="flex flex-col gap-4">
             <h3 class="text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-arche-beige/50 mb-2">{{ t('footer.legal') }}</h3>
             <a href="#" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ t('footer.terms') }}</a>

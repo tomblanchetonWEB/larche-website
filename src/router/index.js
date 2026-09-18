@@ -3,7 +3,7 @@ import { i18n } from '../i18n'
 import LandingPage from '../views/LandingPage.vue'
 import MenuPage from '../views/MenuPage.vue'
 import EventsPage from '../views/EventsPage.vue'
-import AboutPage from '../views/AboutPage.vue'
+import ContactPage from '../views/ContactPage.vue'
 
 const routes = [
   {
@@ -25,10 +25,10 @@ const routes = [
     meta: { titleKey: 'pageTitle.events' },
   },
   {
-    path: '/about',
-    name: 'About',
-    component: AboutPage,
-    meta: { titleKey: 'pageTitle.about' },
+    path: '/contact',
+    name: 'Contact',
+    component: ContactPage,
+    meta: { titleKey: 'pageTitle.contact' },
   },
   {
     path: '/:pathMatch(.*)*',

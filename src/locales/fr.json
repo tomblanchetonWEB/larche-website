@@ -3,13 +3,13 @@
     "logo": "L'ARCHE.",
     "menu": "La carte",
     "events": "Événements",
-    "about": "À propos"
+    "contact": "Contact"
   },
   "pageTitle": {
     "home": "L'Arche - Accueil",
     "menu": "L'Arche - La Carte",
     "events": "L'Arche - Événements",
-    "about": "L'Arche - À Propos"
+    "contact": "L'Arche - Contact"
   },
   "hero": {
     "title": "LE BAR IMMERSIF",
@@ -25,7 +25,6 @@
     "legal": "LÉGAL",
     "terms": "Conditions d'Utilisation",
     "privacy": "Politique de Confidentialité",
-    "legalNotice": "Mentions Légales",
-    "contact": "Contact"
+    "legalNotice": "Mentions Légales"
   }
 }

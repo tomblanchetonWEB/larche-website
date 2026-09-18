@@ -10,7 +10,7 @@
         LE BAR IMMERSIF
       </h1>
       <p class="text-white/80 font-sans text-lg md:text-xl max-w-md">
-        AboutPage
+        ContactPage
       </p>
     </div>
 
