@@ -1,24 +1,25 @@
-# 🚀 Vue 3 Freelance Boilerplate
+# L'Arche Bar-Café 🍸
 
-A clean, lightweight, and production-ready starter template designed to kickstart freelance web projects instantly.
-
-## 💡 The "Why"
-
-Setting up routing, internationalization (i18n), and Tailwind CSS from scratch for every new client is time-consuming. This boilerplate provides a solid, pre-configured foundation so you can skip the boilerplate plumbing and focus immediately on building features and delivering value to clients.
+Official showcase website for L'Arpège Bar, located in Clermont-Ferrand.
 
 ## 🛠️ Tech Stack
 
-*   **Framework:** Vue 3 + Vite ⚡
-*   **Styling:** Tailwind CSS 🎨
-*   **Routing:** Vue Router (with dynamic page titles) 🗺️
-*   **Localization:** Vue i18n (pre-configured for EN/FR) 🌍
-*   **Icons:** Lucide Vue 🧩
-*   **State & Theme:** Built-in Dark/Light mode management 🌙
+*   **Framework:** Vue 3 + Vite
+*   **Styling:** Tailwind CSS
+*   **Routing:** Vue Router
+*   **Localization:** Vue i18n (EN/FR)
+*   **Theme:** Native Dark/Light mode integration
 
-## 📦 How to Use
+## 🚀 Local Development
 
-1. Click the green **Use this template** button on GitHub to create a new repository.
-2. Clone your newly created repository to your local machine.
-3. Install the dependencies:
+1. Clone the repository to your local machine.
+2. Install the dependencies:
    ```bash
    npm install
+
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
