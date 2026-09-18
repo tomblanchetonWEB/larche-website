@@ -1,5 +1,31 @@
 {
-    "home": {
-        "pageTitle": "Accueil"
-    }
+  "nav": {
+    "logo": "L'ARCHE.",
+    "menu": "La carte",
+    "events": "Événements",
+    "about": "À propos"
+  },
+  "pageTitle": {
+    "home": "L'Arche - Accueil",
+    "menu": "L'Arche - La Carte",
+    "events": "L'Arche - Événements",
+    "about": "L'Arche - À Propos"
+  },
+  "hero": {
+    "title": "LE BAR IMMERSIF",
+    "subtitle": "Sérénité la journée, effervescence le soir."
+  },
+  "placeholder": {
+    "title": "Un lieu de vie",
+    "text": "Découvrez notre sélection de cafés de spécialité, bières artisanales et cocktails signatures dans un cadre unique à Clermont-Ferrand."
+  },
+  "footer": {
+    "copyright": "© 2026 L'Arche. Tous droits réservés.",
+    "explorer": "EXPLORER",
+    "legal": "LÉGAL",
+    "terms": "Conditions d'Utilisation",
+    "privacy": "Politique de Confidentialité",
+    "legalNotice": "Mentions Légales",
+    "contact": "Contact"
+  }
 }

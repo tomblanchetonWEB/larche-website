@@ -1,13 +1,34 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { i18n } from '../i18n'
 import LandingPage from '../views/LandingPage.vue'
+import MenuPage from '../views/MenuPage.vue'
+import EventsPage from '../views/EventsPage.vue'
+import AboutPage from '../views/AboutPage.vue'
 
 const routes = [
   {
     path: '/',
     name: 'Landing',
     component: LandingPage,
-    meta: { titleKey: 'home.pageTitle' },
+    meta: { titleKey: 'pageTitle.home' },
+  },
+  {
+    path: '/menu',
+    name: 'Menu',
+    component: MenuPage,
+    meta: { titleKey: 'pageTitle.menu' },
+  },
+  {
+    path: '/events',
+    name: 'Events',
+    component: EventsPage,
+    meta: { titleKey: 'pageTitle.events' },
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: AboutPage,
+    meta: { titleKey: 'pageTitle.about' },
   },
   {
     path: '/:pathMatch(.*)*',
@@ -33,7 +54,7 @@ router.beforeEach((to, from) => {
     const translatedTitle = i18n.global.t(to.meta.titleKey)
     document.title = `${translatedTitle}`
   } else {
-    document.title = 'Client App'
+    document.title = "L'ARCHE."
   }
 
   return true

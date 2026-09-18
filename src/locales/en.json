@@ -1,5 +1,31 @@
 {
-    "home": {
-        "pageTitle": "Home"
-    }
+  "nav": {
+    "logo": "L'ARCHE.",
+    "menu": "Menu",
+    "events": "Events",
+    "about": "About"
+  },
+  "pageTitle": {
+    "home": "L'Arche - Home",
+    "menu": "L'Arche - Menu",
+    "events": "L'Arche - Events",
+    "about": "L'Arche - About"
+  },
+  "hero": {
+    "title": "THE IMMERSIVE BAR",
+    "subtitle": "Serenity by day, excitement by night."
+  },
+  "placeholder": {
+    "title": "A place to live",
+    "text": "Discover our selection of specialty coffees, craft beers, and signature cocktails in a unique setting in Clermont-Ferrand."
+  },
+  "footer": {
+    "copyright": "© 2026 L'Arche. All rights reserved.",
+    "explorer": "EXPLORE",
+    "legal": "LEGAL",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "legalNotice": "Legal Notice",
+    "contact": "Contact"
+  }
 }
