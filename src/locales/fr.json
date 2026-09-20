@@ -11,16 +11,32 @@
     "events": "L'Arche - Événements",
     "contact": "L'Arche - Contact",
     "legal": "L'Arche - Mentions Légales",
-    "privacy": "L'Arche - Politique de Confidentialité",
-    "terms": "L'Arche - Conditions d'Utilisation"
+    "privacy": "L'Arche - Confidentialité",
+    "terms": "L'Arche - CGU"
   },
   "hero": {
-    "title": "LE BAR IMMERSIF",
-    "subtitle": "Sérénité la journée, effervescence le soir."
+    "title": "CAFÉ & BAR",
+    "subtitle": "Au cœur de Clermont-Ferrand."
   },
-  "placeholder": {
-    "title": "Un lieu de vie",
-    "text": "Découvrez notre sélection de cafés de spécialité, bières artisanales et cocktails signatures dans un cadre unique à Clermont-Ferrand."
+  "info": {
+    "title": "Nous trouver",
+    "address": "14 bis rue Saint Genès, 63000 Clermont-Ferrand",
+    "booking": "Réservations",
+    "phone": "07 81 41 90 35",
+    "hoursTitle": "Horaires",
+    "days": {
+      "mon": "Lundi",
+      "tueWed": "Mardi - Mercredi",
+      "thuFri": "Jeudi - Vendredi",
+      "sat": "Samedi",
+      "sun": "Dimanche"
+    },
+    "times": {
+      "closed": "Fermé",
+      "tueWed": "8H30 - 22H",
+      "thuFri": "8H30 - 00H",
+      "sat": "9H30 - 00H"
+    }
   },
   "footer": {
     "copyright": "© 2026 L'Arche. Tous droits réservés.",
@@ -29,5 +45,64 @@
     "terms": "Conditions d'Utilisation",
     "privacy": "Politique de Confidentialité",
     "legalNotice": "Mentions Légales"
+  },
+  "legalLayout": {
+    "lastUpdate": "Dernière mise à jour"
+  },
+  "legalPage": {
+    "title": "Mentions Légales",
+    "date": "19 Septembre 2026",
+    "s1": {
+      "title": "1. Éditeur du site",
+      "p1": "Le site L'Arche est édité par [Nom de la Société], [Forme Juridique] au capital de [Montant] €, dont le siège social est situé au 14 bis rue Saint Genès, 63000 Clermont-Ferrand.",
+      "p2": "Immatriculée au Registre du Commerce et des Sociétés de Clermont-Ferrand sous le numéro [Numéro SIREN].",
+      "p3": "Numéro de TVA intracommunautaire : [Numéro TVA].",
+      "p4": "Directeur de la publication : [Nom du Directeur]."
+    },
+    "s2": {
+      "title": "2. Hébergement",
+      "p1": "Ce site est hébergé par OVH, SAS au capital de 10 174 560 €, dont le siège social est situé au 2 rue Kellermann - 59100 Roubaix - France."
+    },
+    "s3": {
+      "title": "3. Propriété intellectuelle",
+      "p1": "L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.",
+      "p2": "La reproduction de tout ou partie de ce site sur un support électronique quel qu'il soit est formellement interdite sauf autorisation expresse du directeur de la publication."
+    }
+  },
+  "privacyPage": {
+    "title": "Politique de Confidentialité",
+    "date": "19 Septembre 2026",
+    "s1": {
+      "title": "1. Collecte des données",
+      "p1": "Dans le cadre de l'utilisation de notre site, L'Arche peut être amené à collecter certaines données personnelles vous concernant, notamment via notre formulaire de contact ou lors de la navigation (cookies)."
+    },
+    "s2": {
+      "title": "2. Utilisation des données",
+      "p1": "Les données collectées sont utilisées exclusivement pour répondre à vos demandes de contact, gérer vos réservations, et améliorer l'expérience utilisateur sur notre site.",
+      "p2": "L'Arche s'engage à ne jamais vendre, louer ou céder vos données personnelles à des tiers sans votre consentement explicite."
+    },
+    "s3": {
+      "title": "3. Vos droits (RGPD)",
+      "p1": "Conformément à la réglementation applicable (Règlement Général sur la Protection des Données), vous disposez d'un droit d'accès, de rectification, d'effacement et de portabilité de vos données.",
+      "p2": "Pour exercer ces droits, vous pouvez nous contacter par téléphone au 07 81 41 90 35."
+    }
+  },
+  "termsPage": {
+    "title": "Conditions Générales d'Utilisation",
+    "date": "19 Septembre 2026",
+    "s1": {
+      "title": "1. Objet",
+      "p1": "Les présentes Conditions Générales d'Utilisation (CGU) ont pour objet de définir les modalités et conditions dans lesquelles L'Arche met à disposition de ses utilisateurs le site internet, et la manière dont les utilisateurs accèdent au site et utilisent ses services."
+    },
+    "s2": {
+      "title": "2. Accès au site",
+      "p1": "Le site est accessible gratuitement en tout lieu à tout utilisateur ayant un accès à Internet. Tous les frais supportés par l'utilisateur pour accéder au service (matériel informatique, logiciels, connexion Internet, etc.) sont à sa charge.",
+      "p2": "L'éditeur met en œuvre tous les moyens mis à sa disposition pour assurer un accès de qualité à ses services. L'obligation étant de moyens, l'éditeur ne s'engage pas à atteindre ce résultat."
+    },
+    "s3": {
+      "title": "3. Responsabilité",
+      "p1": "Les informations diffusées sur le site sont réputées fiables mais ne bénéficient d'aucune garantie. Elles sont données à titre indicatif et général sans valeur contractuelle.",
+      "p2": "L'Arche ne pourra être tenu responsable des dommages directs ou indirects résultant de l'utilisation de ce site."
+    }
   }
 }

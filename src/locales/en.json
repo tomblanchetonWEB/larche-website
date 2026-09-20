@@ -10,17 +10,33 @@
     "menu": "L'Arche - Menu",
     "events": "L'Arche - Events",
     "contact": "L'Arche - Contact",
-    "legal": "L'Arche - Legal Mentions",
+    "legal": "L'Arche - Legal Notice",
     "privacy": "L'Arche - Privacy Policy",
     "terms": "L'Arche - Terms of Service"
   },
   "hero": {
-    "title": "THE IMMERSIVE BAR",
-    "subtitle": "Serenity by day, excitement by night."
+    "title": "CAFÉ & BAR",
+    "subtitle": "In the heart of Clermont-Ferrand."
   },
-  "placeholder": {
-    "title": "A place to live",
-    "text": "Discover our selection of specialty coffees, craft beers, and signature cocktails in a unique setting in Clermont-Ferrand."
+  "info": {
+    "title": "Visit Us",
+    "address": "14 bis rue Saint Genès, 63000 Clermont-Ferrand",
+    "booking": "Reservations",
+    "phone": "07 81 41 90 35",
+    "hoursTitle": "Opening Hours",
+    "days": {
+      "mon": "Monday",
+      "tueWed": "Tuesday - Wednesday",
+      "thuFri": "Thursday - Friday",
+      "sat": "Saturday",
+      "sun": "Sunday"
+    },
+    "times": {
+      "closed": "Closed",
+      "tueWed": "8:30 AM - 10:00 PM",
+      "thuFri": "8:30 AM - 12:00 AM",
+      "sat": "9:30 AM - 12:00 AM"
+    }
   },
   "footer": {
     "copyright": "© 2026 L'Arche. All rights reserved.",
@@ -29,5 +45,64 @@
     "terms": "Terms of Service",
     "privacy": "Privacy Policy",
     "legalNotice": "Legal Notice"
+  },
+  "legalLayout": {
+    "lastUpdate": "Last updated"
+  },
+  "legalPage": {
+    "title": "Legal Notice",
+    "date": "September 19, 2026",
+    "s1": {
+      "title": "1. Publisher",
+      "p1": "The L'Arche website is published by [Company Name], a [Company Type] with a capital of [Amount] €, headquartered at 14 bis rue Saint Genès, 63000 Clermont-Ferrand.",
+      "p2": "Registered with the Trade and Companies Register of Clermont-Ferrand under number [SIREN Number].",
+      "p3": "Intra-community VAT number: [VAT Number].",
+      "p4": "Publication Director: [Director Name]."
+    },
+    "s2": {
+      "title": "2. Hosting",
+      "p1": "This website is hosted by OVH, SAS with a capital of 10,174,560 €, headquartered at 2 rue Kellermann - 59100 Roubaix - France."
+    },
+    "s3": {
+      "title": "3. Intellectual Property",
+      "p1": "This entire site is subject to French and international legislation on copyright and intellectual property. All reproduction rights are reserved, including for downloadable documents and iconographic and photographic representations.",
+      "p2": "The reproduction of all or part of this site on any electronic medium whatsoever is strictly prohibited without the express permission of the publication director."
+    }
+  },
+  "privacyPage": {
+    "title": "Privacy Policy",
+    "date": "September 19, 2026",
+    "s1": {
+      "title": "1. Data Collection",
+      "p1": "When using our site, L'Arche may collect certain personal data about you, in particular via our contact form or during navigation (cookies)."
+    },
+    "s2": {
+      "title": "2. Use of Data",
+      "p1": "The data collected is used exclusively to respond to your contact requests, manage your reservations, and improve the user experience on our site.",
+      "p2": "L'Arche commits to never selling, renting, or transferring your personal data to third parties without your explicit consent."
+    },
+    "s3": {
+      "title": "3. Your Rights (GDPR)",
+      "p1": "In accordance with applicable regulations (General Data Protection Regulation), you have the right to access, rectify, delete, and port your data.",
+      "p2": "To exercise these rights, you can contact us by phone at 07 81 41 90 35."
+    }
+  },
+  "termsPage": {
+    "title": "Terms of Service",
+    "date": "September 19, 2026",
+    "s1": {
+      "title": "1. Purpose",
+      "p1": "The purpose of these Terms of Service (TOS) is to define the terms and conditions under which L'Arche makes its website available to its users, and the way in which users access the site and use its services."
+    },
+    "s2": {
+      "title": "2. Site Access",
+      "p1": "The site is accessible free of charge anywhere to any user with Internet access. All costs incurred by the user to access the service (computer hardware, software, Internet connection, etc.) are at their expense.",
+      "p2": "The publisher implements all the means at its disposal to ensure high-quality access to its services. The obligation being of means, the publisher does not commit to achieving this result."
+    },
+    "s3": {
+      "title": "3. Liability",
+      "p1": "The information broadcast on the site is deemed reliable but is not guaranteed. It is given for informational and general purposes without contractual value.",
+      "p2": "L'Arche cannot be held liable for any direct or indirect damage resulting from the use of this site."
+    }
   }
 }

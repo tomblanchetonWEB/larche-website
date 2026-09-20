@@ -1,10 +1,15 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
+import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import { Moon, Sun, Globe } from '@lucide/vue'
+import { Moon, Sun, Globe, Menu, X } from '@lucide/vue'
 
 const { t, locale } = useI18n()
+const route = useRoute()
 const isDark = ref(false)
+const isMobileMenuOpen = ref(false)
+
+const isLanding = computed(() => route.path === '/')
 
 const toggleTheme = () => {
   isDark.value = !isDark.value
@@ -22,6 +27,10 @@ const toggleLanguage = () => {
   localStorage.setItem('user-locale', locale.value)
 }
 
+const closeMobileMenu = () => {
+  isMobileMenuOpen.value = false
+}
+
 onMounted(() => {
   const savedTheme = localStorage.getItem('theme')
   if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -33,31 +42,99 @@ onMounted(() => {
 
 <template>
   <div class="min-h-screen w-full font-sans relative selection:bg-arche-green selection:text-arche-beige flex flex-col">
-    <nav class="absolute top-0 left-0 w-full z-50 px-8 md:px-12 py-6 flex items-center justify-between bg-transparent">
+    <nav class="absolute top-0 left-0 w-full z-40 px-8 md:px-12 py-6 flex items-center justify-between bg-transparent">
       <div class="flex-1 flex justify-start">
-        <router-link to="/" class="font-display text-xl md:text-2xl font-bold tracking-widest text-white drop-shadow-md hover:opacity-80 transition-opacity">
+        <router-link to="/"
+          class="font-display text-xl md:text-2xl font-bold tracking-widest transition-colors"
+          :class="isLanding ? 'text-white drop-shadow-md hover:text-arche-beige' : 'text-arche-green dark:text-arche-beige hover:opacity-80'">
           {{ t('nav.logo') }}
         </router-link>
       </div>
 
       <div class="hidden md:flex items-center justify-center gap-12 flex-1">
-        <router-link to="/menu" class="text-base font-medium text-white/95 drop-shadow-md hover:text-white transition-colors">{{ t('nav.menu') }}</router-link>
-        <router-link to="/events" class="text-base font-medium text-white/95 drop-shadow-md hover:text-white transition-colors">{{ t('nav.events') }}</router-link>
-        <router-link to="/contact" class="text-base font-medium text-white/95 drop-shadow-md hover:text-white transition-colors">{{ t('nav.contact') }}</router-link>
+        <router-link to="/menu" 
+          class="text-base font-medium transition-colors"
+          :class="isLanding ? 'text-white/95 drop-shadow-md hover:text-white' : 'text-arche-green/80 dark:text-arche-beige/80 hover:text-arche-green dark:hover:text-white'">
+          {{ t('nav.menu') }}
+        </router-link>
+        <router-link to="/events" 
+          class="text-base font-medium transition-colors"
+          :class="isLanding ? 'text-white/95 drop-shadow-md hover:text-white' : 'text-arche-green/80 dark:text-arche-beige/80 hover:text-arche-green dark:hover:text-white'">
+          {{ t('nav.events') }}
+        </router-link>
+        <router-link to="/contact" 
+          class="text-base font-medium transition-colors"
+          :class="isLanding ? 'text-white/95 drop-shadow-md hover:text-white' : 'text-arche-green/80 dark:text-arche-beige/80 hover:text-arche-green dark:hover:text-white'">
+          {{ t('nav.contact') }}
+        </router-link>
       </div>
 
-      <div class="flex-1 flex items-center justify-end gap-6">
-        <button @click="toggleTheme" class="text-white drop-shadow-md hover:opacity-70 transition-opacity">
+      <div class="hidden md:flex flex-1 items-center justify-end gap-6">
+        <button @click="toggleTheme" 
+          class="transition-colors"
+          :class="isLanding ? 'text-white drop-shadow-md hover:opacity-70' : 'text-arche-green dark:text-arche-beige hover:opacity-70'">
           <Moon v-if="isDark" class="w-5 h-5" />
           <Sun v-else class="w-5 h-5" />
         </button>
 
-        <button @click="toggleLanguage" class="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-white/20 transition-colors shadow-lg">
-          <Globe class="w-4 h-4 drop-shadow-sm" />
-          <span class="drop-shadow-sm">{{ locale }}</span>
+        <button @click="toggleLanguage" 
+          class="flex items-center gap-2 px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-colors shadow-lg border backdrop-blur-md"
+          :class="isLanding 
+            ? 'bg-white/10 border-white/20 text-white hover:bg-white/20' 
+            : 'bg-arche-green/5 border-arche-green/20 text-arche-green hover:bg-arche-green/10 dark:bg-white/5 dark:border-white/10 dark:text-arche-beige dark:hover:bg-white/10'">
+          <Globe class="w-4 h-4" :class="isLanding ? 'drop-shadow-sm' : ''" />
+          <span :class="isLanding ? 'drop-shadow-sm' : ''">{{ locale }}</span>
+        </button>
+      </div>
+
+      <div class="flex md:hidden flex-1 items-center justify-end">
+        <button @click="isMobileMenuOpen = true" 
+          class="transition-colors"
+          :class="isLanding ? 'text-white drop-shadow-md hover:opacity-70' : 'text-arche-green dark:text-arche-beige hover:opacity-70'">
+          <Menu class="w-7 h-7" />
         </button>
       </div>
     </nav>
+
+    <transition
+      enter-active-class="transition-opacity duration-300 ease-out"
+      enter-from-class="opacity-0"
+      enter-to-class="opacity-100"
+      leave-active-class="transition-opacity duration-200 ease-in"
+      leave-from-class="opacity-100"
+      leave-to-class="opacity-0"
+    >
+      <div v-if="isMobileMenuOpen" class="fixed inset-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-2xl flex flex-col">
+        <div class="px-8 py-6 flex items-center justify-between">
+          <div class="flex-1 flex justify-start">
+            <span class="font-display text-xl font-bold tracking-widest text-white">{{ t('nav.logo') }}</span>
+          </div>
+          <div class="flex-1 flex justify-end">
+            <button @click="closeMobileMenu" class="text-white hover:opacity-70 transition-opacity">
+              <X class="w-7 h-7" />
+            </button>
+          </div>
+        </div>
+
+        <div class="flex-1 flex flex-col items-center justify-center gap-10">
+          <router-link @click="closeMobileMenu" to="/menu" class="text-3xl font-display uppercase tracking-widest text-white hover:text-white/70 transition-colors">{{ t('nav.menu') }}</router-link>
+          <router-link @click="closeMobileMenu" to="/events" class="text-3xl font-display uppercase tracking-widest text-white hover:text-white/70 transition-colors">{{ t('nav.events') }}</router-link>
+          <router-link @click="closeMobileMenu" to="/contact" class="text-3xl font-display uppercase tracking-widest text-white hover:text-white/70 transition-colors">{{ t('nav.contact') }}</router-link>
+        </div>
+
+        <div class="py-12 flex items-center justify-center gap-8 border-t border-white/10 mx-8">
+          <button @click="toggleTheme" class="text-white hover:opacity-70 transition-opacity">
+            <Moon v-if="isDark" class="w-6 h-6" />
+            <Sun v-else class="w-6 h-6" />
+          </button>
+
+          <button @click="toggleLanguage" class="flex items-center gap-2 bg-white/10 border border-white/20 text-white px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-white/20 transition-colors">
+            <Globe class="w-5 h-5" />
+            <span>{{ locale }}</span>
+          </button>
+        </div>
+      </div>
+    </transition>
 
     <main class="flex-grow w-full">
       <router-view />
@@ -65,9 +142,10 @@ onMounted(() => {
 
     <footer class="w-full bg-arche-beige dark:bg-surface-dark text-gray-800 dark:text-arche-beige py-16 px-8 md:px-12 border-t border-black/5 dark:border-white/5 transition-colors duration-300">
       <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12">
-        <div class="flex flex-col gap-6 max-w-sm justify-between">
-          <div>
+        <div class="flex flex-col gap-6 max-w-sm">
+          <div class="flex flex-col gap-1">
             <span class="font-display text-xl md:text-2xl font-bold tracking-widest text-arche-green dark:text-arche-beige">{{ t('nav.logo') }}</span>
+            <p class="text-gray-500 dark:text-arche-beige/60 text-xs">{{ t('footer.copyright') }}</p>
           </div>
 
           <div class="flex items-center gap-4 mt-2">
@@ -76,13 +154,11 @@ onMounted(() => {
               <Sun v-else class="w-4 h-4" />
             </button>
 
-            <button @click="toggleLanguage" class="flex items-center gap-2 px-4 h-10 rounded-full border border-gray-300 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-xs font-bold uppercase tracking-wider">
+            <button @click="toggleLanguage" class="flex items-center gap-2 px-4 h-10 rounded-full border border-gray-300 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-arche-beige">
               <Globe class="w-4 h-4" />
               <span>{{ locale }}</span>
             </button>
           </div>
-
-          <p class="text-gray-500 dark:text-arche-beige/60 text-xs mt-4">{{ t('footer.copyright') }}</p>
         </div>
 
         <div class="flex flex-wrap gap-16 md:gap-24">

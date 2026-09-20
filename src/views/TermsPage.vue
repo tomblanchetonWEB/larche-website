@@ -1,18 +1,21 @@
 <script setup>
+import { useI18n } from 'vue-i18n'
+import LegalLayout from '../layouts/LegalLayout.vue'
+
+const { t } = useI18n()
 </script>
 
 <template>
-  <main class="relative w-full h-screen overflow-hidden bg-arche-green flex items-center justify-center">
-    <div class="absolute inset-0 bg-linear-to-br from-arche-green to-[#2a3821] opacity-90 z-0"></div>
-    <div class="absolute inset-0 bg-black/30 z-10"></div>
-    <div class="relative z-20 text-center flex flex-col items-center mt-20">
-      <h1 class="font-display text-5xl md:text-8xl text-arche-beige tracking-tight mb-4 drop-shadow-lg">
-        LE BAR IMMERSIF
-      </h1>
-      <p class="text-white/80 font-sans text-lg md:text-xl max-w-md">
-        TermsPage
-      </p>
-    </div>
+  <LegalLayout :title="t('termsPage.title')" :lastUpdated="t('termsPage.date')">
+    <h2>{{ t('termsPage.s1.title') }}</h2>
+    <p>{{ t('termsPage.s1.p1') }}</p>
 
-  </main>
+    <h2>{{ t('termsPage.s2.title') }}</h2>
+    <p>{{ t('termsPage.s2.p1') }}</p>
+    <p>{{ t('termsPage.s2.p2') }}</p>
+
+    <h2>{{ t('termsPage.s3.title') }}</h2>
+    <p>{{ t('termsPage.s3.p1') }}</p>
+    <p>{{ t('termsPage.s3.p2') }}</p>
+  </LegalLayout>
 </template>
