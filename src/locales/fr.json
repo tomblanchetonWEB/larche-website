@@ -16,7 +16,7 @@
   },
   "hero": {
     "title": "CAFÉ & BAR",
-    "subtitle": "Au cœur de Clermont-Ferrand.",
+    "subtitle": "Un café qui ose le cocktail, un bar qui respecte le café. Au cœur de Clermont-Ferrand, on ne choisit pas.",
     "cta": "Où nous trouver"
   },
   "info": {
@@ -38,7 +38,8 @@
   },
   "ambiance": {
     "title": "L'Atmosphère",
-    "subtitle": "Un lieu pensé pour la détente, les échanges et les découvertes gustatives."
+    "subtitle": "Un lieu pensé pour la détente, les échanges et les découvertes gustatives.",
+    "instagram": "Suivez-nous sur Instagram"
   },
   "reviews": {
     "title": "Vos avis",

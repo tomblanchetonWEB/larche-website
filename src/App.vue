@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, computed, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import { i18n } from './i18n' // Import the global i18n instance directly
+import { i18n } from './i18n'
 import { Moon, Sun, Globe, Menu, X } from '@lucide/vue'
 
 const route = useRoute()
@@ -22,14 +22,12 @@ const toggleTheme = () => {
 }
 
 const toggleLanguage = () => {
-  // Update the global locale directly
   const currentLang = i18n.global.locale.value
   const newLang = currentLang === 'fr' ? 'en' : 'fr'
   
   i18n.global.locale.value = newLang
   localStorage.setItem('user-locale', newLang)
   
-  // Update document title dynamically
   if (route.meta.titleKey) {
     document.title = i18n.global.t(route.meta.titleKey)
   } else {
@@ -180,6 +178,14 @@ onMounted(() => {
               <Globe class="w-4 h-4" />
               <span>{{ $i18n.locale }}</span>
             </button>
+
+            <a href="https://www.instagram.com/larche_clf/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-gray-700 dark:text-arche-beige">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
           </div>
         </div>
 

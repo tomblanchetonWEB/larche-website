@@ -16,7 +16,7 @@
   },
   "hero": {
     "title": "CAFÉ & BAR",
-    "subtitle": "In the heart of Clermont-Ferrand.",
+    "subtitle": "A café that dares to do cocktails, a bar that respects coffee. In the heart of Clermont-Ferrand, we don't choose.",
     "cta": "Find us"
   },
   "info": {
@@ -38,7 +38,8 @@
   },
   "ambiance": {
     "title": "The Atmosphere",
-    "subtitle": "A place made for unwinding, good conversation and new flavors."
+    "subtitle": "A place made for unwinding, good conversation and new flavors.",
+    "instagram": "Follow us on Instagram"
   },
   "reviews": {
     "title": "Your Reviews",

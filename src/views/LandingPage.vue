@@ -14,7 +14,7 @@ const scrollToInfo = () => {
   <div class="w-full flex flex-col">
     <!-- Hero Section -->
     <section class="relative w-full h-screen flex flex-col items-center justify-end pb-24 md:pb-32 overflow-hidden bg-arche-beige dark:bg-surface-dark transition-colors duration-300">
-      
+
       <div
         class="absolute inset-0 z-0"
         style="
@@ -28,21 +28,22 @@ const scrollToInfo = () => {
         <img :src="templateImg" alt="Hero" class="w-full h-full object-cover" />
         <div class="absolute inset-0 bg-black/40"></div>
       </div>
-      
-      <div 
+
+      <div
         class="absolute inset-0 z-10 pointer-events-none opacity-[0.035] mix-blend-overlay"
         style="background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii45Ii8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+');"
       ></div>
 
       <div class="relative z-30 text-center flex flex-col items-center px-4 w-full">
-        <h1 class="font-display text-5xl md:text-7xl text-white tracking-tight mb-3 drop-shadow-lg uppercase">
+        <h1 class="font-display text-5xl md:text-7xl text-white tracking-tight mb-5 drop-shadow-lg uppercase">
           {{ $t('hero.title') }}
         </h1>
-        <p class="text-white/90 font-sans text-lg md:text-xl max-w-md drop-shadow-md mb-10 font-medium">
+
+        <p class="text-white/90 font-sans text-base md:text-lg max-w-xl drop-shadow-md mb-10 font-light leading-relaxed tracking-wide">
           {{ $t('hero.subtitle') }}
         </p>
 
-        <button @click="scrollToInfo" class="bg-white text-black px-7 py-3.5 rounded-full font-sans text-sm font-bold tracking-wide hover:scale-105 transition-transform flex items-center gap-2 shadow-lg">
+        <button @click="scrollToInfo" class="flex items-center gap-3 px-8 py-4 rounded-full font-sans text-sm font-bold uppercase tracking-widest transition-all duration-300 shadow-xl border backdrop-blur-md bg-white/10 border-white/20 text-white hover:bg-white/20 hover:scale-105">
           <span>{{ $t('hero.cta') }}</span>
           <ArrowDown class="w-4 h-4" />
         </button>
@@ -52,7 +53,7 @@ const scrollToInfo = () => {
     <!-- Info Section -->
     <section id="infos" class="relative z-30 w-full bg-arche-beige dark:bg-surface-dark py-24 md:py-32 px-6 md:px-12 transition-colors duration-300">
       <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12 border-y border-black/10 dark:border-white/10 py-16">
-        
+
         <div class="flex flex-col items-center text-center gap-6">
           <MapPin class="w-6 h-6 text-arche-green dark:text-arche-beige" />
           <div class="flex flex-col items-center gap-3">
@@ -113,6 +114,19 @@ const scrollToInfo = () => {
           <div class="bg-black/10 dark:bg-white/5 rounded-2xl w-full h-full md:col-span-2 md:row-span-2 transition-all duration-300 hover:opacity-90 cursor-pointer"></div>
           <div class="bg-black/15 dark:bg-white/10 rounded-2xl w-full h-full transition-all duration-300 hover:opacity-90 cursor-pointer"></div>
           <div class="bg-black/20 dark:bg-white/20 rounded-2xl w-full h-full transition-all duration-300 hover:opacity-90 cursor-pointer"></div>
+        </div>
+
+        <div class="mt-14 flex justify-center">
+          <a href="https://www.instagram.com/larche_clf/" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 text-arche-green dark:text-arche-beige hover:opacity-70 transition-opacity">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span class="font-sans text-sm font-bold uppercase tracking-widest border-b border-transparent group-hover:border-current transition-colors pb-0.5">
+              {{ $t('ambiance.instagram') }}
+            </span>
+          </a>
         </div>
       </div>
     </section>
