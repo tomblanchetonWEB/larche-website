@@ -3,7 +3,7 @@ import fr from './locales/fr.json'
 import en from './locales/en.json'
 
 const savedLocale = localStorage.getItem('user-locale')
-const browserLang = navigator.language.split('-')[0]
+const browserLang = navigator.language ? navigator.language.split('-')[0] : 'en'
 
 const supportedLocales = ['fr', 'en']
 
@@ -19,5 +19,6 @@ export const i18n = createI18n({
   legacy: false,
   locale: startingLocale,
   fallbackLocale: 'en',
+  globalInjection: true,
   messages: { fr, en },
 })

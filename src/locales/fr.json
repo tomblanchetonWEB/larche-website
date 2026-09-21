@@ -3,39 +3,57 @@
     "logo": "L'ARCHE.",
     "menu": "La carte",
     "events": "Événements",
-    "contact": "Contact"
+    "story": "Notre histoire"
   },
   "pageTitle": {
     "home": "L'Arche - Accueil",
     "menu": "L'Arche - La Carte",
     "events": "L'Arche - Événements",
-    "contact": "L'Arche - Contact",
+    "story": "L'Arche - Notre Histoire",
     "legal": "L'Arche - Mentions Légales",
     "privacy": "L'Arche - Confidentialité",
     "terms": "L'Arche - CGU"
   },
   "hero": {
     "title": "CAFÉ & BAR",
-    "subtitle": "Au cœur de Clermont-Ferrand."
+    "subtitle": "Au cœur de Clermont-Ferrand.",
+    "cta": "Où nous trouver"
   },
   "info": {
-    "title": "Nous trouver",
-    "address": "14 bis rue Saint Genès, 63000 Clermont-Ferrand",
-    "booking": "Réservations",
+    "addressTitle": "Adresse",
+    "address": "14 bis rue Saint Genès\n63000 Clermont-Ferrand",
+    "bookingTitle": "Réservations",
     "phone": "07 81 41 90 35",
     "hoursTitle": "Horaires",
-    "days": {
-      "mon": "Lundi",
-      "tueWed": "Mardi - Mercredi",
-      "thuFri": "Jeudi - Vendredi",
-      "sat": "Samedi",
-      "sun": "Dimanche"
+    "hours": {
+      "d1": "Lun & Dim",
+      "h1": "Fermé",
+      "d2": "Mar - Mer",
+      "h2": "8H30 - 22H",
+      "d3": "Jeu - Ven",
+      "h3": "8H30 - 00H",
+      "d4": "Sam",
+      "h4": "9H30 - 00H"
+    }
+  },
+  "ambiance": {
+    "title": "L'Atmosphère",
+    "subtitle": "Un lieu pensé pour la détente, les échanges et les découvertes gustatives."
+  },
+  "reviews": {
+    "title": "Vos avis",
+    "subtitle": "Ce que nos clients disent de nous.",
+    "r1": {
+      "name": "Sophie M.",
+      "text": "Superbe ambiance, le café de spécialité est incroyable et le lieu est magnifique."
     },
-    "times": {
-      "closed": "Fermé",
-      "tueWed": "8H30 - 22H",
-      "thuFri": "8H30 - 00H",
-      "sat": "9H30 - 00H"
+    "r2": {
+      "name": "Julien T.",
+      "text": "Le meilleur endroit à Clermont pour boire un verre entre amis. Équipe au top !"
+    },
+    "r3": {
+      "name": "Camille L.",
+      "text": "Déco soignée et cocktails signatures à tomber par terre. Je recommande vivement."
     }
   },
   "footer": {

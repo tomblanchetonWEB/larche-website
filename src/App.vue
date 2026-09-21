@@ -1,10 +1,10 @@
 <script setup>
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted, computed, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { Moon, Sun, Globe, Menu, X } from '@lucide/vue'
 
-const { t, locale } = useI18n()
+const { t, locale } = useI18n({ useScope: 'global' })
 const route = useRoute()
 const isDark = ref(false)
 const isMobileMenuOpen = ref(false)
@@ -23,19 +23,35 @@ const toggleTheme = () => {
 }
 
 const toggleLanguage = () => {
-  locale.value = locale.value === 'fr' ? 'en' : 'fr'
-  localStorage.setItem('user-locale', locale.value)
+  const newLang = locale.value === 'fr' ? 'en' : 'fr'
+  locale.value = newLang
+  localStorage.setItem('user-locale', newLang)
+  
+  if (route.meta.titleKey) {
+    document.title = t(route.meta.titleKey)
+  } else {
+    document.title = "L'ARCHE."
+  }
 }
 
 const closeMobileMenu = () => {
   isMobileMenuOpen.value = false
 }
 
+watch(() => route.path, () => {
+  closeMobileMenu()
+})
+
 onMounted(() => {
   const savedTheme = localStorage.getItem('theme')
   if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     isDark.value = true
     document.documentElement.classList.add('dark')
+  }
+  
+  const savedLocale = localStorage.getItem('user-locale')
+  if (savedLocale) {
+    locale.value = savedLocale
   }
 })
 </script>
@@ -62,10 +78,10 @@ onMounted(() => {
           :class="isLanding ? 'text-white/95 drop-shadow-md hover:text-white' : 'text-arche-green/80 dark:text-arche-beige/80 hover:text-arche-green dark:hover:text-white'">
           {{ t('nav.events') }}
         </router-link>
-        <router-link to="/contact" 
+        <router-link to="/story" 
           class="text-base font-medium transition-colors"
           :class="isLanding ? 'text-white/95 drop-shadow-md hover:text-white' : 'text-arche-green/80 dark:text-arche-beige/80 hover:text-arche-green dark:hover:text-white'">
-          {{ t('nav.contact') }}
+          {{ t('nav.story') }}
         </router-link>
       </div>
 
@@ -119,7 +135,7 @@ onMounted(() => {
         <div class="flex-1 flex flex-col items-center justify-center gap-10">
           <router-link @click="closeMobileMenu" to="/menu" class="text-3xl font-display uppercase tracking-widest text-white hover:text-white/70 transition-colors">{{ t('nav.menu') }}</router-link>
           <router-link @click="closeMobileMenu" to="/events" class="text-3xl font-display uppercase tracking-widest text-white hover:text-white/70 transition-colors">{{ t('nav.events') }}</router-link>
-          <router-link @click="closeMobileMenu" to="/contact" class="text-3xl font-display uppercase tracking-widest text-white hover:text-white/70 transition-colors">{{ t('nav.contact') }}</router-link>
+          <router-link @click="closeMobileMenu" to="/story" class="text-3xl font-display uppercase tracking-widest text-white hover:text-white/70 transition-colors">{{ t('nav.story') }}</router-link>
         </div>
 
         <div class="py-12 flex items-center justify-center gap-8 border-t border-white/10 mx-8">
@@ -136,7 +152,7 @@ onMounted(() => {
       </div>
     </transition>
 
-    <main class="flex-grow w-full">
+    <main class="grow w-full">
       <router-view />
     </main>
 
@@ -166,7 +182,7 @@ onMounted(() => {
             <h3 class="text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-arche-beige/50 mb-2">{{ t('footer.explorer') }}</h3>
             <router-link to="/menu" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ t('nav.menu') }}</router-link>
             <router-link to="/events" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ t('nav.events') }}</router-link>
-            <router-link to="/contact" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ t('nav.contact') }}</router-link>
+            <router-link to="/story" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ t('nav.story') }}</router-link>
           </div>
 
           <div class="flex flex-col gap-4">

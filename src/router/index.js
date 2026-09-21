@@ -3,7 +3,7 @@ import { i18n } from '../i18n'
 import LandingPage from '../views/LandingPage.vue'
 import MenuPage from '../views/MenuPage.vue'
 import EventsPage from '../views/EventsPage.vue'
-import ContactPage from '../views/ContactPage.vue'
+import StoryPage from '../views/StoryPage.vue'
 import LegalPage from '../views/LegalPage.vue'
 import PrivacyPage from '../views/PrivacyPage.vue'
 import TermsPage from '../views/TermsPage.vue'
@@ -28,10 +28,10 @@ const routes = [
     meta: { titleKey: 'pageTitle.events' },
   },
   {
-    path: '/contact',
-    name: 'Contact',
-    component: ContactPage,
-    meta: { titleKey: 'pageTitle.contact' },
+    path: '/story',
+    name: 'Story',
+    component: StoryPage,
+    meta: { titleKey: 'pageTitle.story' },
   },
   {
     path: '/legal',

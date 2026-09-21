@@ -1,50 +1,68 @@
 {
   "nav": {
     "logo": "L'ARCHE.",
-    "menu": "Menu",
-    "events": "Events",
-    "contact": "Contact"
+    "menu": "La carte",
+    "events": "Événements",
+    "story": "Notre histoire"
   },
   "pageTitle": {
-    "home": "L'Arche - Home",
-    "menu": "L'Arche - Menu",
-    "events": "L'Arche - Events",
-    "contact": "L'Arche - Contact",
-    "legal": "L'Arche - Legal Notice",
-    "privacy": "L'Arche - Privacy Policy",
-    "terms": "L'Arche - Terms of Service"
+    "home": "L'Arche - Accueil",
+    "menu": "L'Arche - La Carte",
+    "events": "L'Arche - Événements",
+    "story": "L'Arche - Notre Histoire",
+    "legal": "L'Arche - Mentions Légales",
+    "privacy": "L'Arche - Confidentialité",
+    "terms": "L'Arche - CGU"
   },
   "hero": {
     "title": "CAFÉ & BAR",
-    "subtitle": "In the heart of Clermont-Ferrand."
+    "subtitle": "Au cœur de Clermont-Ferrand.",
+    "cta": "Où nous trouver"
   },
   "info": {
-    "title": "Visit Us",
-    "address": "14 bis rue Saint Genès, 63000 Clermont-Ferrand",
-    "booking": "Reservations",
+    "addressTitle": "Adresse",
+    "address": "14 bis rue Saint Genès\n63000 Clermont-Ferrand",
+    "bookingTitle": "Réservations",
     "phone": "07 81 41 90 35",
-    "hoursTitle": "Opening Hours",
-    "days": {
-      "mon": "Monday",
-      "tueWed": "Tuesday - Wednesday",
-      "thuFri": "Thursday - Friday",
-      "sat": "Saturday",
-      "sun": "Sunday"
+    "hoursTitle": "Horaires",
+    "hours": {
+      "d1": "Lun & Dim",
+      "h1": "Fermé",
+      "d2": "Mar - Mer",
+      "h2": "8H30 - 22H",
+      "d3": "Jeu - Ven",
+      "h3": "8H30 - 00H",
+      "d4": "Sam",
+      "h4": "9H30 - 00H"
+    }
+  },
+  "ambiance": {
+    "title": "L'Atmosphère",
+    "subtitle": "Un lieu pensé pour la détente, les échanges et les découvertes gustatives."
+  },
+  "reviews": {
+    "title": "Vos avis",
+    "subtitle": "Ce que nos clients disent de nous.",
+    "r1": {
+      "name": "Sophie M.",
+      "text": "Superbe ambiance, le café de spécialité est incroyable et le lieu est magnifique."
     },
-    "times": {
-      "closed": "Closed",
-      "tueWed": "8:30 AM - 10:00 PM",
-      "thuFri": "8:30 AM - 12:00 AM",
-      "sat": "9:30 AM - 12:00 AM"
+    "r2": {
+      "name": "Julien T.",
+      "text": "Le meilleur endroit à Clermont pour boire un verre entre amis. Équipe au top !"
+    },
+    "r3": {
+      "name": "Camille L.",
+      "text": "Déco soignée et cocktails signatures à tomber par terre. Je recommande vivement."
     }
   },
   "footer": {
-    "copyright": "© 2026 L'Arche. All rights reserved.",
-    "explorer": "EXPLORE",
-    "legal": "LEGAL",
-    "terms": "Terms of Service",
-    "privacy": "Privacy Policy",
-    "legalNotice": "Legal Notice"
+    "copyright": "© 2026 L'Arche. Tous droits réservés.",
+    "explorer": "EXPLORER",
+    "legal": "LÉGAL",
+    "terms": "Conditions d'Utilisation",
+    "privacy": "Politique de Confidentialité",
+    "legalNotice": "Mentions Légales"
   },
   "legalLayout": {
     "lastUpdate": "Last updated"
