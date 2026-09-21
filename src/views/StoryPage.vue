@@ -1,18 +1,77 @@
 <script setup>
+import { onMounted } from 'vue'
+import noeImg from '../assets/images/noe.jpg'
+import placeImg from '../assets/images/place.png'
+
+onMounted(() => {
+  window.scrollTo(0, 0)
+})
 </script>
 
 <template>
-  <main class="relative w-full h-screen overflow-hidden bg-arche-green flex items-center justify-center">
-    <div class="absolute inset-0 bg-linear-to-br from-arche-green to-[#2a3821] opacity-90 z-0"></div>
-    <div class="absolute inset-0 bg-black/30 z-10"></div>
-    <div class="relative z-20 text-center flex flex-col items-center mt-20">
-      <h1 class="font-display text-5xl md:text-8xl text-arche-beige tracking-tight mb-4 drop-shadow-lg">
-        LE BAR IMMERSIF
-      </h1>
-      <p class="text-white/80 font-sans text-lg md:text-xl max-w-md">
-        StoryPage
-      </p>
+  <div class="w-full min-h-screen bg-arche-beige dark:bg-surface-dark transition-colors duration-300 pt-32 pb-24 md:pb-40 selection:bg-arche-green selection:text-white dark:selection:bg-arche-beige dark:selection:text-surface-dark overflow-hidden relative">
+    <div class="absolute top-40 -right-20 text-[12rem] md:text-[20rem] font-display font-bold uppercase opacity-5 text-black dark:text-arche-beige pointer-events-none select-none tracking-tighter leading-none z-0 rotate-90 origin-right hidden lg:block">
+      ORIGIN
     </div>
 
-  </main>
+    <div class="max-w-5xl mx-auto px-6 md:px-12 relative z-10">
+      <div class="w-full border-b-2 border-black dark:border-arche-beige pb-8 md:pb-16 mb-16 md:mb-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+        <div class="flex flex-col gap-4">
+          <p class="font-sans text-xs md:text-sm font-bold uppercase tracking-[0.3em] text-red-600 dark:text-red-500 ml-1 md:ml-1.5">
+            {{ $t('storyPage.tagline') }}
+          </p>
+          <h1 class="font-display text-6xl md:text-8xl lg:text-9xl uppercase tracking-tighter text-black dark:text-arche-beige leading-none">
+            {{ $t('storyPage.title') }}
+          </h1>
+        </div>
+        <p class="font-sans text-lg md:text-xl font-light text-gray-600 dark:text-arche-beige/70 max-w-sm leading-relaxed">
+          {{ $t('storyPage.subtitle') }}
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-6 relative group">
+            <div class="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-black/5 dark:bg-white/5 relative z-10">
+              <img :src="noeImg" :alt="$t('storyPage.imageAlt1')" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
+            </div>
+            <div class="absolute -bottom-4 -left-4 w-full h-full border-2 border-black/10 dark:border-arche-beige/10 rounded-2xl z-0 hidden md:block"></div>
+          </div>
+
+          <div class="lg:col-span-6 flex flex-col gap-6">
+            <p class="font-sans text-xl md:text-2xl font-medium text-black dark:text-arche-beige leading-relaxed">
+              {{ $t('storyPage.p1') }}
+            </p>
+            <p class="font-sans text-base md:text-lg text-gray-700 dark:text-arche-beige/80 leading-relaxed font-light">
+              {{ $t('storyPage.p2') }}
+            </p>
+          </div>
+        </div>
+
+        <div class="max-w-3xl mx-auto w-full flex flex-col gap-6 my-8">
+          <p class="font-sans text-base md:text-lg text-gray-700 dark:text-arche-beige/80 leading-relaxed font-light">
+            {{ $t('storyPage.p3') }}
+          </p>
+        </div>
+
+        <div class="my-6 py-12 border-y border-black/10 dark:border-arche-beige/20 text-center">
+          <h2 class="font-display text-2xl md:text-4xl uppercase tracking-widest text-arche-green dark:text-arche-beige leading-snug">
+            {{ $t('storyPage.quote') }}
+          </h2>
+        </div>
+
+        <div class="w-full aspect-[16/9] rounded-2xl overflow-hidden bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 my-4">
+          <img :src="placeImg" :alt="$t('storyPage.imageAlt2')" class="w-full h-full object-cover" />
+        </div>
+
+        <div class="max-w-3xl mx-auto w-full flex flex-col gap-6 mt-8">
+          <p class="font-sans text-base md:text-lg text-gray-700 dark:text-arche-beige/80 leading-relaxed font-light">
+            {{ $t('storyPage.p4') }}
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
 </template>

@@ -36,7 +36,7 @@ const scrollToCategory = (categoryId) => {
       <div class="w-full border-b-2 border-black dark:border-arche-beige pb-8 md:pb-16 mb-12 md:mb-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
         <div class="flex flex-col gap-4">
           <!-- Optical alignment correction using positive left margin to align with the large L -->
-          <p class="font-sans text-xs md:text-sm font-bold uppercase tracking-[0.3em] text-red-600 dark:text-red-500 ml-[4px] md:ml-[6px]">
+          <p class="font-sans text-xs md:text-sm font-bold uppercase tracking-[0.3em] text-red-600 dark:text-red-500 ml-1 md:ml-1.5">
             {{ $t('menuPage.warning') }}
           </p>
           <h1 class="font-display text-6xl md:text-8xl lg:text-9xl uppercase tracking-tighter text-black dark:text-arche-beige leading-none">
@@ -85,7 +85,7 @@ const scrollToCategory = (categoryId) => {
                 <div class="flex flex-col gap-2 group">
                   <div class="flex justify-between items-baseline gap-4 w-full">
                     <h3 class="font-sans text-xl font-bold uppercase tracking-wide text-black dark:text-arche-beige group-hover:text-red-600 dark:group-hover:text-red-500 transition-colors">{{ $t('menuPage.items.c1.name') }}</h3>
-                    <div class="flex-grow border-b border-dashed border-gray-300 dark:border-gray-700 relative -top-1.5 opacity-50"></div>
+                    <div class="grow border-b border-dashed border-gray-300 dark:border-gray-700 relative -top-1.5 opacity-50"></div>
                     <span class="font-sans text-lg font-bold text-black dark:text-arche-beige">{{ $t('menuPage.items.c1.price') }}€</span>
                   </div>
                   <p class="font-sans text-sm text-gray-500 dark:text-arche-beige/60">{{ $t('menuPage.items.c1.desc') }}</p>
@@ -95,7 +95,7 @@ const scrollToCategory = (categoryId) => {
                 <div class="flex flex-col gap-2 group">
                   <div class="flex justify-between items-baseline gap-4 w-full">
                     <h3 class="font-sans text-xl font-bold uppercase tracking-wide text-black dark:text-arche-beige group-hover:text-red-600 dark:group-hover:text-red-500 transition-colors">{{ $t('menuPage.items.c2.name') }}</h3>
-                    <div class="flex-grow border-b border-dashed border-gray-300 dark:border-gray-700 relative -top-1.5 opacity-50"></div>
+                    <div class="grow border-b border-dashed border-gray-300 dark:border-gray-700 relative -top-1.5 opacity-50"></div>
                     <span class="font-sans text-lg font-bold text-black dark:text-arche-beige">{{ $t('menuPage.items.c2.price') }}€</span>
                   </div>
                   <p class="font-sans text-sm text-gray-500 dark:text-arche-beige/60">{{ $t('menuPage.items.c2.desc') }}</p>
@@ -105,7 +105,7 @@ const scrollToCategory = (categoryId) => {
                 <div class="flex flex-col gap-2 group">
                   <div class="flex justify-between items-baseline gap-4 w-full">
                     <h3 class="font-sans text-xl font-bold uppercase tracking-wide text-black dark:text-arche-beige group-hover:text-red-600 dark:group-hover:text-red-500 transition-colors">{{ $t('menuPage.items.c3.name') }}</h3>
-                    <div class="flex-grow border-b border-dashed border-gray-300 dark:border-gray-700 relative -top-1.5 opacity-50"></div>
+                    <div class="grow border-b border-dashed border-gray-300 dark:border-gray-700 relative -top-1.5 opacity-50"></div>
                     <span class="font-sans text-lg font-bold text-black dark:text-arche-beige">{{ $t('menuPage.items.c3.price') }}€</span>
                   </div>
                   <p class="font-sans text-sm text-gray-500 dark:text-arche-beige/60">{{ $t('menuPage.items.c3.desc') }}</p>
@@ -130,7 +130,7 @@ const scrollToCategory = (categoryId) => {
                 <div class="flex flex-col gap-2 group">
                   <div class="flex justify-between items-baseline gap-4 w-full">
                     <h3 class="font-sans text-xl font-bold uppercase tracking-wide text-black dark:text-arche-beige group-hover:text-red-600 dark:group-hover:text-red-500 transition-colors">{{ $t('menuPage.items.k1.name') }}</h3>
-                    <div class="flex-grow border-b border-dashed border-gray-300 dark:border-gray-700 relative -top-1.5 opacity-50"></div>
+                    <div class="grow border-b border-dashed border-gray-300 dark:border-gray-700 relative -top-1.5 opacity-50"></div>
                     <span class="font-sans text-lg font-bold text-black dark:text-arche-beige">{{ $t('menuPage.items.k1.price') }}€</span>
                   </div>
                   <p class="font-sans text-sm text-gray-500 dark:text-arche-beige/60">{{ $t('menuPage.items.k1.desc') }}</p>
@@ -140,7 +140,7 @@ const scrollToCategory = (categoryId) => {
                 <div class="flex flex-col gap-2 group">
                   <div class="flex justify-between items-baseline gap-4 w-full">
                     <h3 class="font-sans text-xl font-bold uppercase tracking-wide text-black dark:text-arche-beige group-hover:text-red-600 dark:group-hover:text-red-500 transition-colors">{{ $t('menuPage.items.k2.name') }}</h3>
-                    <div class="flex-grow border-b border-dashed border-gray-300 dark:border-gray-700 relative -top-1.5 opacity-50"></div>
+                    <div class="grow border-b border-dashed border-gray-300 dark:border-gray-700 relative -top-1.5 opacity-50"></div>
                     <span class="font-sans text-lg font-bold text-black dark:text-arche-beige">{{ $t('menuPage.items.k2.price') }}€</span>
                   </div>
                   <p class="font-sans text-sm text-gray-500 dark:text-arche-beige/60">{{ $t('menuPage.items.k2.desc') }}</p>
@@ -150,7 +150,7 @@ const scrollToCategory = (categoryId) => {
                 <div class="flex flex-col gap-2 group">
                   <div class="flex justify-between items-baseline gap-4 w-full">
                     <h3 class="font-sans text-xl font-bold uppercase tracking-wide text-black dark:text-arche-beige group-hover:text-red-600 dark:group-hover:text-red-500 transition-colors">{{ $t('menuPage.items.k3.name') }}</h3>
-                    <div class="flex-grow border-b border-dashed border-gray-300 dark:border-gray-700 relative -top-1.5 opacity-50"></div>
+                    <div class="grow border-b border-dashed border-gray-300 dark:border-gray-700 relative -top-1.5 opacity-50"></div>
                     <span class="font-sans text-lg font-bold text-black dark:text-arche-beige">{{ $t('menuPage.items.k3.price') }}€</span>
                   </div>
                   <p class="font-sans text-sm text-gray-500 dark:text-arche-beige/60">{{ $t('menuPage.items.k3.desc') }}</p>
@@ -175,7 +175,7 @@ const scrollToCategory = (categoryId) => {
                 <div class="flex flex-col gap-2 group">
                   <div class="flex justify-between items-baseline gap-4 w-full">
                     <h3 class="font-sans text-xl font-bold uppercase tracking-wide text-black dark:text-arche-beige group-hover:text-red-600 dark:group-hover:text-red-500 transition-colors">{{ $t('menuPage.items.w1.name') }}</h3>
-                    <div class="flex-grow border-b border-dashed border-gray-300 dark:border-gray-700 relative -top-1.5 opacity-50"></div>
+                    <div class="grow border-b border-dashed border-gray-300 dark:border-gray-700 relative -top-1.5 opacity-50"></div>
                     <span class="font-sans text-lg font-bold text-black dark:text-arche-beige">{{ $t('menuPage.items.w1.price') }}€</span>
                   </div>
                   <p class="font-sans text-sm text-gray-500 dark:text-arche-beige/60">{{ $t('menuPage.items.w1.desc') }}</p>
@@ -185,7 +185,7 @@ const scrollToCategory = (categoryId) => {
                 <div class="flex flex-col gap-2 group">
                   <div class="flex justify-between items-baseline gap-4 w-full">
                     <h3 class="font-sans text-xl font-bold uppercase tracking-wide text-black dark:text-arche-beige group-hover:text-red-600 dark:group-hover:text-red-500 transition-colors">{{ $t('menuPage.items.w2.name') }}</h3>
-                    <div class="flex-grow border-b border-dashed border-gray-300 dark:border-gray-700 relative -top-1.5 opacity-50"></div>
+                    <div class="grow border-b border-dashed border-gray-300 dark:border-gray-700 relative -top-1.5 opacity-50"></div>
                     <span class="font-sans text-lg font-bold text-black dark:text-arche-beige">{{ $t('menuPage.items.w2.price') }}€</span>
                   </div>
                   <p class="font-sans text-sm text-gray-500 dark:text-arche-beige/60">{{ $t('menuPage.items.w2.desc') }}</p>

@@ -71,17 +71,17 @@
   },
   "legalPage": {
     "title": "Legal Notice",
-    "date": "September 19, 2026",
+    "date": "September 21, 2026",
     "s1": {
       "title": "1. Publisher",
-      "p1": "The L'Arche website is published by [Company Name], a [Company Type] with a capital of [Amount] €, headquartered at 14 bis rue Saint Genès, 63000 Clermont-Ferrand.",
-      "p2": "Registered with the Trade and Companies Register of Clermont-Ferrand under number [SIREN Number].",
-      "p3": "Intra-community VAT number: [VAT Number].",
-      "p4": "Publication Director: [Director Name]."
+      "p1": "The L'Arche website is published by Noé De La Rochette, headquartered at 14 bis rue Saint Genès, 63000 Clermont-Ferrand.",
+      "p2": "Registered with the Trade and Companies Register under SIREN number 104 930 334 (Head office SIRET: 104 930 334 00016)[cite: 9].",
+      "p3": "Intra-community VAT number: FR18104930334[cite: 9].",
+      "p4": "Publication Director: Noé De La Rochette."
     },
     "s2": {
       "title": "2. Hosting",
-      "p1": "This website is hosted by OVH, SAS with a capital of 10,174,560 €, headquartered at 2 rue Kellermann - 59100 Roubaix - France."
+      "p1": "This website is hosted by Cloudflare, Inc., located at 101 Townsend St, San Francisco, CA 94107, USA."
     },
     "s3": {
       "title": "3. Intellectual Property",
@@ -104,7 +104,7 @@
     "s3": {
       "title": "3. Your Rights (GDPR)",
       "p1": "In accordance with applicable regulations (General Data Protection Regulation), you have the right to access, rectify, delete, and port your data.",
-      "p2": "To exercise these rights, you can contact us by phone at 07 81 41 90 35."
+      "p2": "To exercise these rights, you can contact us by phone at +33 07 81 41 90 35."
     }
   },
   "termsPage": {
@@ -146,5 +146,17 @@
       "w2": { "name": "Local IPA Pint", "desc": "Craft draft beer, citrus notes (50cl).", "price": "7.50" },
       "s1": { "name": "Homemade Iced Tea", "desc": "Peach and lemon infusion, lightly sweetened.", "price": "4.50" }
     }
+  },
+  "storyPage": {
+    "title": "Our Story",
+    "subtitle": "An urban third-place in the heart of Clermont-Ferrand.",
+    "tagline": "The Founder",
+    "p1": "\"When I have an idea in my head, I go for it.\" With this conviction, Noé De La Rochette chose to take over the former Waffle Café at 14 Rue Saint-Genès, officially opening L'Arche in May 2026.",
+    "p2": "Conceived as a true urban third-place, the space breaks away from traditional codes. Neither a simple cafe nor an ordinary bar, it is a hybrid meeting point that evolves throughout the day: from morning coffee and croissants to quick lunches, and evening drinks shared with friends.",
+    "p3": "The former tea-room concept gives way to a versatile bar with a broader scope, designed to welcome local residents, students, and professionals alike.",
+    "p4": "Anchored in one of the city's most vibrant streets, L'Arche brings a warm, complementary vibe designed to breathe new life into this landmark location on Rue Saint-Genès.",
+    "quote": "\"The neighborhood is very beautiful, it represents the city well I think.\"",
+    "imageAlt1": "Noé De La Rochette, founder of L'Arche",
+    "imageAlt2": "The bar atmosphere"
   }
 }

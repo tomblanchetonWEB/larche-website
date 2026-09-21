@@ -113,7 +113,7 @@ const scrollToInfo = () => {
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-[800px] md:h-[600px]">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-200 md:h-150">
           <!-- Image 1 (Large, spans 2 columns and 2 rows on desktop) -->
           <div class="rounded-2xl w-full h-full md:col-span-2 md:row-span-2 transition-all duration-300 hover:opacity-90 cursor-pointer overflow-hidden bg-black/5">
             <img :src="atmosphere1Img" alt="L'Arche Ambiance 1" class="w-full h-full object-cover" />
@@ -160,7 +160,7 @@ const scrollToInfo = () => {
             <div class="flex items-center gap-1">
               <Star v-for="s in 5" :key="s" class="w-4 h-4 fill-arche-green text-arche-green dark:fill-arche-beige dark:text-arche-beige" />
             </div>
-            <p class="font-sans text-base md:text-lg text-gray-800 dark:text-gray-200 italic leading-relaxed flex-grow">
+            <p class="font-sans text-base md:text-lg text-gray-800 dark:text-gray-200 italic leading-relaxed grow">
               "{{ $t(`reviews.r${i}.text`) }}"
             </p>
             <p class="font-sans text-sm md:text-base font-bold text-arche-green dark:text-arche-beige tracking-wide">

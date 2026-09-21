@@ -71,17 +71,17 @@
   },
   "legalPage": {
     "title": "Mentions Légales",
-    "date": "19 Septembre 2026",
+    "date": "21 Septembre 2026",
     "s1": {
       "title": "1. Éditeur du site",
-      "p1": "Le site L'Arche est édité par [Nom de la Société], [Forme Juridique] au capital de [Montant] €, dont le siège social est situé au 14 bis rue Saint Genès, 63000 Clermont-Ferrand.",
-      "p2": "Immatriculée au Registre du Commerce et des Sociétés de Clermont-Ferrand sous le numéro [Numéro SIREN].",
-      "p3": "Numéro de TVA intracommunautaire : [Numéro TVA].",
-      "p4": "Directeur de la publication : [Nom du Directeur]."
+      "p1": "Le site L'Arche est édité par Noé De La Rochette (société au capital social variable), dont le siège social est situé au 14 bis rue Saint Genès, 63000 Clermont-Ferrand.",
+      "p2": "Immatriculée au Registre du Commerce et des Sociétés sous le numéro SIREN 104 930 334 (SIRET du siège : 104 930 334 00016).",
+      "p3": "Numéro de TVA intracommunautaire : FR18104930334.",
+      "p4": "Directeur de la publication : Noé De La Rochette."
     },
     "s2": {
       "title": "2. Hébergement",
-      "p1": "Ce site est hébergé par OVH, SAS au capital de 10 174 560 €, dont le siège social est situé au 2 rue Kellermann - 59100 Roubaix - France."
+      "p1": "Ce site web est hébergé par Cloudflare, Inc., dont le siège social est situé au 101 Townsend St, San Francisco, CA 94107, États-Unis."
     },
     "s3": {
       "title": "3. Propriété intellectuelle",
@@ -104,7 +104,7 @@
     "s3": {
       "title": "3. Vos droits (RGPD)",
       "p1": "Conformément à la réglementation applicable (Règlement Général sur la Protection des Données), vous disposez d'un droit d'accès, de rectification, d'effacement et de portabilité de vos données.",
-      "p2": "Pour exercer ces droits, vous pouvez nous contacter par téléphone au 07 81 41 90 35."
+      "p2": "Pour exercer ces droits, vous pouvez nous contacter par téléphone au +33 07 81 41 90 35."
     }
   },
   "termsPage": {
@@ -146,5 +146,17 @@
       "w2": { "name": "Pinte IPA Locale", "desc": "Bière pression artisanale, notes d'agrumes (50cl).", "price": "7.50" },
       "s1": { "name": "Thé Glacé Maison", "desc": "Infusion pêche et citron, très peu sucré.", "price": "4.50" }
     }
+  },
+"storyPage": {
+    "title": "Notre Histoire",
+    "subtitle": "Un tiers-lieu urbain au cœur de Clermont-Ferrand.",
+    "tagline": "Le Fondateur",
+    "p1": "« Quand j’ai une idée dans la tête, j’y vais. » C'est avec cette conviction que Noé De La Rochette a choisi de reprendre l'ancien Waffle Café au 14 rue Saint-Genès, ouvrant officiellement L'Arche en mai 2026.",
+    "p2": "Pensé comme un véritable tiers-lieu urbain, l'espace s'affranchit des codes classiques. Ni simple café, ni bar ordinaire, c'est un point de rencontre hybride qui vit au rythme de la journée : du café-croissant matinal au déjeuner sur le pouce, jusqu'aux verres partagés entre amis le soir.",
+    "p3": "L'ancien concept orienté salon de thé laisse place à un bar polyvalent, plus large dans ses usages et sa clientèle, pour s'adapter aussi bien aux habitants du quartier, aux étudiants qu'aux actifs.",
+    "p4": "Ancré dans l'une des rues les plus vivantes de la ville, L'Arche apporte une offre complémentaire et chaleureuse, conçue pour faire vivre ce lieu emblématique de la rue Saint-Genès.",
+    "quote": "« Le quartier est très beau, il représente bien la ville je trouve. »",
+    "imageAlt1": "Noé De La Rochette, fondateur de L'Arche",
+    "imageAlt2": "L'ambiance du bar"
   }
 }
