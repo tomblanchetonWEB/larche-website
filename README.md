@@ -14,11 +14,9 @@ Official showcase website for L'Arpège Bar, located in Clermont-Ferrand.
 
 1. Clone the repository to your local machine.
 2. Install the dependencies:
-   ```bash
-   npm install
-
+```bash
+npm install
 ```
-
 3. Start the development server:
 ```bash
 npm run dev
