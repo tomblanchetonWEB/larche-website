@@ -1,8 +1,6 @@
 <script setup>
-import { useI18n } from 'vue-i18n'
 import { ArrowDown, MapPin, Phone, Clock, Star } from '@lucide/vue'
-
-const { t } = useI18n({ useScope: 'global' })
+import templateImg from '../assets/images/template.webp'
 
 const scrollToInfo = () => {
   const infoSection = document.getElementById('infos')
@@ -17,7 +15,6 @@ const scrollToInfo = () => {
     <!-- Hero Section -->
     <section class="relative w-full h-screen flex flex-col items-center justify-end pb-24 md:pb-32 overflow-hidden bg-arche-beige dark:bg-surface-dark transition-colors duration-300">
       
-      <!-- Background Image with Gradient Mask -->
       <div
         class="absolute inset-0 z-0"
         style="
@@ -28,27 +25,25 @@ const scrollToInfo = () => {
           -webkit-mask-image: var(--fade); mask-image: var(--fade);
         "
       >
-        <img src="../assets/images/template.webp" alt="Hero" class="w-full h-full object-cover" />
+        <img :src="templateImg" alt="Hero" class="w-full h-full object-cover" />
         <div class="absolute inset-0 bg-black/40"></div>
       </div>
       
-      <!-- Base64 Encoded Grain Filter -->
       <div 
         class="absolute inset-0 z-10 pointer-events-none opacity-[0.035] mix-blend-overlay"
         style="background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii45Ii8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+');"
       ></div>
 
-      <!-- Hero Content -->
       <div class="relative z-30 text-center flex flex-col items-center px-4 w-full">
         <h1 class="font-display text-5xl md:text-7xl text-white tracking-tight mb-3 drop-shadow-lg uppercase">
-          {{ t('hero.title') }}
+          {{ $t('hero.title') }}
         </h1>
         <p class="text-white/90 font-sans text-lg md:text-xl max-w-md drop-shadow-md mb-10 font-medium">
-          {{ t('hero.subtitle') }}
+          {{ $t('hero.subtitle') }}
         </p>
 
         <button @click="scrollToInfo" class="bg-white text-black px-7 py-3.5 rounded-full font-sans text-sm font-bold tracking-wide hover:scale-105 transition-transform flex items-center gap-2 shadow-lg">
-          <span>{{ t('hero.cta') }}</span>
+          <span>{{ $t('hero.cta') }}</span>
           <ArrowDown class="w-4 h-4" />
         </button>
       </div>
@@ -61,39 +56,39 @@ const scrollToInfo = () => {
         <div class="flex flex-col items-center text-center gap-6">
           <MapPin class="w-6 h-6 text-arche-green dark:text-arche-beige" />
           <div class="flex flex-col items-center gap-3">
-            <h2 class="font-display text-lg uppercase tracking-widest text-arche-green dark:text-arche-beige">{{ t('info.addressTitle') }}</h2>
-            <p class="font-sans text-base text-gray-700 dark:text-gray-300 whitespace-pre-line leading-relaxed">{{ t('info.address') }}</p>
+            <h2 class="font-display text-lg uppercase tracking-widest text-arche-green dark:text-arche-beige">{{ $t('info.addressTitle') }}</h2>
+            <p class="font-sans text-base text-gray-700 dark:text-gray-300 whitespace-pre-line leading-relaxed">{{ $t('info.address') }}</p>
           </div>
         </div>
 
         <div class="flex flex-col items-center text-center gap-6">
           <Phone class="w-6 h-6 text-arche-green dark:text-arche-beige" />
           <div class="flex flex-col items-center gap-3">
-            <h2 class="font-display text-lg uppercase tracking-widest text-arche-green dark:text-arche-beige">{{ t('info.bookingTitle') }}</h2>
-            <a :href="'tel:' + t('info.phone').replace(/\s/g, '')" class="font-sans text-base text-gray-700 dark:text-gray-300 hover:text-arche-green dark:hover:text-white transition-colors">{{ t('info.phone') }}</a>
+            <h2 class="font-display text-lg uppercase tracking-widest text-arche-green dark:text-arche-beige">{{ $t('info.bookingTitle') }}</h2>
+            <a :href="'tel:' + $t('info.phone').replace(/\s/g, '')" class="font-sans text-base text-gray-700 dark:text-gray-300 hover:text-arche-green dark:hover:text-white transition-colors">{{ $t('info.phone') }}</a>
           </div>
         </div>
 
         <div class="flex flex-col items-center text-center gap-6">
           <Clock class="w-6 h-6 text-arche-green dark:text-arche-beige" />
           <div class="flex flex-col items-center gap-3 w-full">
-            <h2 class="font-display text-lg uppercase tracking-widest text-arche-green dark:text-arche-beige">{{ t('info.hoursTitle') }}</h2>
+            <h2 class="font-display text-lg uppercase tracking-widest text-arche-green dark:text-arche-beige">{{ $t('info.hoursTitle') }}</h2>
             <ul class="font-sans text-sm text-gray-700 dark:text-gray-300 w-full max-w-[220px] flex flex-col gap-2.5">
               <li class="flex justify-between w-full">
-                <span>{{ t('info.hours.d1') }}</span>
-                <span>{{ t('info.hours.h1') }}</span>
+                <span>{{ $t('info.hours.d1') }}</span>
+                <span>{{ $t('info.hours.h1') }}</span>
               </li>
               <li class="flex justify-between w-full">
-                <span>{{ t('info.hours.d2') }}</span>
-                <span>{{ t('info.hours.h2') }}</span>
+                <span>{{ $t('info.hours.d2') }}</span>
+                <span>{{ $t('info.hours.h2') }}</span>
               </li>
               <li class="flex justify-between w-full">
-                <span>{{ t('info.hours.d3') }}</span>
-                <span>{{ t('info.hours.h3') }}</span>
+                <span>{{ $t('info.hours.d3') }}</span>
+                <span>{{ $t('info.hours.h3') }}</span>
               </li>
               <li class="flex justify-between w-full">
-                <span>{{ t('info.hours.d4') }}</span>
-                <span>{{ t('info.hours.h4') }}</span>
+                <span>{{ $t('info.hours.d4') }}</span>
+                <span>{{ $t('info.hours.h4') }}</span>
               </li>
             </ul>
           </div>
@@ -107,10 +102,10 @@ const scrollToInfo = () => {
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
           <h2 class="font-display text-4xl md:text-5xl text-arche-green dark:text-arche-beige mb-6 uppercase tracking-widest">
-            {{ t('ambiance.title') }}
+            {{ $t('ambiance.title') }}
           </h2>
           <p class="font-sans text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            {{ t('ambiance.subtitle') }}
+            {{ $t('ambiance.subtitle') }}
           </p>
         </div>
 
@@ -127,10 +122,10 @@ const scrollToInfo = () => {
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
           <h2 class="font-display text-4xl md:text-5xl text-arche-green dark:text-arche-beige mb-6 uppercase tracking-widest">
-            {{ t('reviews.title') }}
+            {{ $t('reviews.title') }}
           </h2>
           <p class="font-sans text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            {{ t('reviews.subtitle') }}
+            {{ $t('reviews.subtitle') }}
           </p>
         </div>
 
@@ -140,10 +135,10 @@ const scrollToInfo = () => {
               <Star v-for="s in 5" :key="s" class="w-4 h-4 fill-arche-green text-arche-green dark:fill-arche-beige dark:text-arche-beige" />
             </div>
             <p class="font-sans text-base md:text-lg text-gray-800 dark:text-gray-200 italic leading-relaxed flex-grow">
-              "{{ t(`reviews.r${i}.text`) }}"
+              "{{ $t(`reviews.r${i}.text`) }}"
             </p>
             <p class="font-sans text-sm md:text-base font-bold text-arche-green dark:text-arche-beige tracking-wide">
-              {{ t(`reviews.r${i}.name`) }}
+              {{ $t(`reviews.r${i}.name`) }}
             </p>
           </div>
         </div>

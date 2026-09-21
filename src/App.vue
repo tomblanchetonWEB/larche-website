@@ -1,10 +1,9 @@
 <script setup>
 import { ref, onMounted, computed, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import { useI18n } from 'vue-i18n'
+import { i18n } from './i18n' // Import the global i18n instance directly
 import { Moon, Sun, Globe, Menu, X } from '@lucide/vue'
 
-const { t, locale } = useI18n({ useScope: 'global' })
 const route = useRoute()
 const isDark = ref(false)
 const isMobileMenuOpen = ref(false)
@@ -23,12 +22,16 @@ const toggleTheme = () => {
 }
 
 const toggleLanguage = () => {
-  const newLang = locale.value === 'fr' ? 'en' : 'fr'
-  locale.value = newLang
+  // Update the global locale directly
+  const currentLang = i18n.global.locale.value
+  const newLang = currentLang === 'fr' ? 'en' : 'fr'
+  
+  i18n.global.locale.value = newLang
   localStorage.setItem('user-locale', newLang)
   
+  // Update document title dynamically
   if (route.meta.titleKey) {
-    document.title = t(route.meta.titleKey)
+    document.title = i18n.global.t(route.meta.titleKey)
   } else {
     document.title = "L'ARCHE."
   }
@@ -51,19 +54,20 @@ onMounted(() => {
   
   const savedLocale = localStorage.getItem('user-locale')
   if (savedLocale) {
-    locale.value = savedLocale
+    i18n.global.locale.value = savedLocale
   }
 })
 </script>
 
 <template>
   <div class="min-h-screen w-full font-sans relative selection:bg-arche-green selection:text-arche-beige flex flex-col">
+    <!-- Desktop Navigation -->
     <nav class="absolute top-0 left-0 w-full z-40 px-8 md:px-12 py-6 flex items-center justify-between bg-transparent">
       <div class="flex-1 flex justify-start">
         <router-link to="/"
           class="font-display text-xl md:text-2xl font-bold tracking-widest transition-colors"
           :class="isLanding ? 'text-white drop-shadow-md hover:text-arche-beige' : 'text-arche-green dark:text-arche-beige hover:opacity-80'">
-          {{ t('nav.logo') }}
+          {{ $t('nav.logo') }}
         </router-link>
       </div>
 
@@ -71,17 +75,17 @@ onMounted(() => {
         <router-link to="/menu" 
           class="text-base font-medium transition-colors"
           :class="isLanding ? 'text-white/95 drop-shadow-md hover:text-white' : 'text-arche-green/80 dark:text-arche-beige/80 hover:text-arche-green dark:hover:text-white'">
-          {{ t('nav.menu') }}
+          {{ $t('nav.menu') }}
         </router-link>
         <router-link to="/events" 
           class="text-base font-medium transition-colors"
           :class="isLanding ? 'text-white/95 drop-shadow-md hover:text-white' : 'text-arche-green/80 dark:text-arche-beige/80 hover:text-arche-green dark:hover:text-white'">
-          {{ t('nav.events') }}
+          {{ $t('nav.events') }}
         </router-link>
         <router-link to="/story" 
           class="text-base font-medium transition-colors"
           :class="isLanding ? 'text-white/95 drop-shadow-md hover:text-white' : 'text-arche-green/80 dark:text-arche-beige/80 hover:text-arche-green dark:hover:text-white'">
-          {{ t('nav.story') }}
+          {{ $t('nav.story') }}
         </router-link>
       </div>
 
@@ -99,7 +103,7 @@ onMounted(() => {
             ? 'bg-white/10 border-white/20 text-white hover:bg-white/20' 
             : 'bg-arche-green/5 border-arche-green/20 text-arche-green hover:bg-arche-green/10 dark:bg-white/5 dark:border-white/10 dark:text-arche-beige dark:hover:bg-white/10'">
           <Globe class="w-4 h-4" :class="isLanding ? 'drop-shadow-sm' : ''" />
-          <span :class="isLanding ? 'drop-shadow-sm' : ''">{{ locale }}</span>
+          <span :class="isLanding ? 'drop-shadow-sm' : ''">{{ $i18n.locale }}</span>
         </button>
       </div>
 
@@ -112,6 +116,7 @@ onMounted(() => {
       </div>
     </nav>
 
+    <!-- Mobile Menu Overlay -->
     <transition
       enter-active-class="transition-opacity duration-300 ease-out"
       enter-from-class="opacity-0"
@@ -123,7 +128,7 @@ onMounted(() => {
       <div v-if="isMobileMenuOpen" class="fixed inset-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-2xl flex flex-col">
         <div class="px-8 py-6 flex items-center justify-between">
           <div class="flex-1 flex justify-start">
-            <span class="font-display text-xl font-bold tracking-widest text-white">{{ t('nav.logo') }}</span>
+            <span class="font-display text-xl font-bold tracking-widest text-white">{{ $t('nav.logo') }}</span>
           </div>
           <div class="flex-1 flex justify-end">
             <button @click="closeMobileMenu" class="text-white hover:opacity-70 transition-opacity">
@@ -133,9 +138,9 @@ onMounted(() => {
         </div>
 
         <div class="flex-1 flex flex-col items-center justify-center gap-10">
-          <router-link @click="closeMobileMenu" to="/menu" class="text-3xl font-display uppercase tracking-widest text-white hover:text-white/70 transition-colors">{{ t('nav.menu') }}</router-link>
-          <router-link @click="closeMobileMenu" to="/events" class="text-3xl font-display uppercase tracking-widest text-white hover:text-white/70 transition-colors">{{ t('nav.events') }}</router-link>
-          <router-link @click="closeMobileMenu" to="/story" class="text-3xl font-display uppercase tracking-widest text-white hover:text-white/70 transition-colors">{{ t('nav.story') }}</router-link>
+          <router-link @click="closeMobileMenu" to="/menu" class="text-3xl font-display uppercase tracking-widest text-white hover:text-white/70 transition-colors">{{ $t('nav.menu') }}</router-link>
+          <router-link @click="closeMobileMenu" to="/events" class="text-3xl font-display uppercase tracking-widest text-white hover:text-white/70 transition-colors">{{ $t('nav.events') }}</router-link>
+          <router-link @click="closeMobileMenu" to="/story" class="text-3xl font-display uppercase tracking-widest text-white hover:text-white/70 transition-colors">{{ $t('nav.story') }}</router-link>
         </div>
 
         <div class="py-12 flex items-center justify-center gap-8 border-t border-white/10 mx-8">
@@ -146,7 +151,7 @@ onMounted(() => {
 
           <button @click="toggleLanguage" class="flex items-center gap-2 bg-white/10 border border-white/20 text-white px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-white/20 transition-colors">
             <Globe class="w-5 h-5" />
-            <span>{{ locale }}</span>
+            <span>{{ $i18n.locale }}</span>
           </button>
         </div>
       </div>
@@ -156,12 +161,13 @@ onMounted(() => {
       <router-view />
     </main>
 
+    <!-- Footer -->
     <footer class="w-full bg-arche-beige dark:bg-surface-dark text-gray-800 dark:text-arche-beige py-16 px-8 md:px-12 border-t border-black/5 dark:border-white/5 transition-colors duration-300">
       <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12">
         <div class="flex flex-col gap-6 max-w-sm">
           <div class="flex flex-col gap-1">
-            <span class="font-display text-xl md:text-2xl font-bold tracking-widest text-arche-green dark:text-arche-beige">{{ t('nav.logo') }}</span>
-            <p class="text-gray-500 dark:text-arche-beige/60 text-xs">{{ t('footer.copyright') }}</p>
+            <span class="font-display text-xl md:text-2xl font-bold tracking-widest text-arche-green dark:text-arche-beige">{{ $t('nav.logo') }}</span>
+            <p class="text-gray-500 dark:text-arche-beige/60 text-xs">{{ $t('footer.copyright') }}</p>
           </div>
 
           <div class="flex items-center gap-4 mt-2">
@@ -172,24 +178,24 @@ onMounted(() => {
 
             <button @click="toggleLanguage" class="flex items-center gap-2 px-4 h-10 rounded-full border border-gray-300 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-arche-beige">
               <Globe class="w-4 h-4" />
-              <span>{{ locale }}</span>
+              <span>{{ $i18n.locale }}</span>
             </button>
           </div>
         </div>
 
         <div class="flex flex-wrap gap-16 md:gap-24">
           <div class="flex flex-col gap-4">
-            <h3 class="text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-arche-beige/50 mb-2">{{ t('footer.explorer') }}</h3>
-            <router-link to="/menu" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ t('nav.menu') }}</router-link>
-            <router-link to="/events" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ t('nav.events') }}</router-link>
-            <router-link to="/story" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ t('nav.story') }}</router-link>
+            <h3 class="text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-arche-beige/50 mb-2">{{ $t('footer.explorer') }}</h3>
+            <router-link to="/menu" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ $t('nav.menu') }}</router-link>
+            <router-link to="/events" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ $t('nav.events') }}</router-link>
+            <router-link to="/story" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ $t('nav.story') }}</router-link>
           </div>
 
           <div class="flex flex-col gap-4">
-            <h3 class="text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-arche-beige/50 mb-2">{{ t('footer.legal') }}</h3>
-            <router-link to="/terms" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ t('footer.terms') }}</router-link>
-            <router-link to="/privacy" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ t('footer.privacy') }}</router-link>
-            <router-link to="/legal" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ t('footer.legalNotice') }}</router-link>
+            <h3 class="text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-arche-beige/50 mb-2">{{ $t('footer.legal') }}</h3>
+            <router-link to="/terms" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ $t('footer.terms') }}</router-link>
+            <router-link to="/privacy" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ $t('footer.privacy') }}</router-link>
+            <router-link to="/legal" class="text-sm hover:text-arche-green dark:hover:text-white transition-colors">{{ $t('footer.legalNotice') }}</router-link>
           </div>
         </div>
       </div>
