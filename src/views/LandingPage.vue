@@ -74,7 +74,7 @@ const scrollToInfo = () => {
           <Clock class="w-6 h-6 text-arche-green dark:text-arche-beige" />
           <div class="flex flex-col items-center gap-3 w-full">
             <h2 class="font-display text-lg uppercase tracking-widest text-arche-green dark:text-arche-beige">{{ $t('info.hoursTitle') }}</h2>
-            <ul class="font-sans text-sm text-gray-700 dark:text-gray-300 w-full max-w-[220px] flex flex-col gap-2.5">
+            <ul class="font-sans text-sm text-gray-700 dark:text-gray-300 w-full max-w-55 flex flex-col gap-2.5">
               <li class="flex justify-between w-full">
                 <span>{{ $t('info.hours.d1') }}</span>
                 <span>{{ $t('info.hours.h1') }}</span>
@@ -110,7 +110,7 @@ const scrollToInfo = () => {
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-[800px] md:h-[600px]">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-200 md:h-150">
           <div class="bg-black/10 dark:bg-white/5 rounded-2xl w-full h-full md:col-span-2 md:row-span-2 transition-all duration-300 hover:opacity-90 cursor-pointer"></div>
           <div class="bg-black/15 dark:bg-white/10 rounded-2xl w-full h-full transition-all duration-300 hover:opacity-90 cursor-pointer"></div>
           <div class="bg-black/20 dark:bg-white/20 rounded-2xl w-full h-full transition-all duration-300 hover:opacity-90 cursor-pointer"></div>
@@ -148,7 +148,7 @@ const scrollToInfo = () => {
             <div class="flex items-center gap-1">
               <Star v-for="s in 5" :key="s" class="w-4 h-4 fill-arche-green text-arche-green dark:fill-arche-beige dark:text-arche-beige" />
             </div>
-            <p class="font-sans text-base md:text-lg text-gray-800 dark:text-gray-200 italic leading-relaxed flex-grow">
+            <p class="font-sans text-base md:text-lg text-gray-800 dark:text-gray-200 italic leading-relaxed grow">
               "{{ $t(`reviews.r${i}.text`) }}"
             </p>
             <p class="font-sans text-sm md:text-base font-bold text-arche-green dark:text-arche-beige tracking-wide">

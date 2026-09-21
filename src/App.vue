@@ -24,10 +24,10 @@ const toggleTheme = () => {
 const toggleLanguage = () => {
   const currentLang = i18n.global.locale.value
   const newLang = currentLang === 'fr' ? 'en' : 'fr'
-  
+
   i18n.global.locale.value = newLang
   localStorage.setItem('user-locale', newLang)
-  
+
   if (route.meta.titleKey) {
     document.title = i18n.global.t(route.meta.titleKey)
   } else {
@@ -49,7 +49,7 @@ onMounted(() => {
     isDark.value = true
     document.documentElement.classList.add('dark')
   }
-  
+
   const savedLocale = localStorage.getItem('user-locale')
   if (savedLocale) {
     i18n.global.locale.value = savedLocale
@@ -70,17 +70,17 @@ onMounted(() => {
       </div>
 
       <div class="hidden md:flex items-center justify-center gap-12 flex-1">
-        <router-link to="/menu" 
+        <router-link to="/menu"
           class="text-base font-medium transition-colors"
           :class="isLanding ? 'text-white/95 drop-shadow-md hover:text-white' : 'text-arche-green/80 dark:text-arche-beige/80 hover:text-arche-green dark:hover:text-white'">
           {{ $t('nav.menu') }}
         </router-link>
-        <router-link to="/events" 
+        <router-link to="/events"
           class="text-base font-medium transition-colors"
           :class="isLanding ? 'text-white/95 drop-shadow-md hover:text-white' : 'text-arche-green/80 dark:text-arche-beige/80 hover:text-arche-green dark:hover:text-white'">
           {{ $t('nav.events') }}
         </router-link>
-        <router-link to="/story" 
+        <router-link to="/story"
           class="text-base font-medium transition-colors"
           :class="isLanding ? 'text-white/95 drop-shadow-md hover:text-white' : 'text-arche-green/80 dark:text-arche-beige/80 hover:text-arche-green dark:hover:text-white'">
           {{ $t('nav.story') }}
@@ -88,17 +88,17 @@ onMounted(() => {
       </div>
 
       <div class="hidden md:flex flex-1 items-center justify-end gap-6">
-        <button @click="toggleTheme" 
+        <button @click="toggleTheme"
           class="transition-colors"
           :class="isLanding ? 'text-white drop-shadow-md hover:opacity-70' : 'text-arche-green dark:text-arche-beige hover:opacity-70'">
           <Moon v-if="isDark" class="w-5 h-5" />
           <Sun v-else class="w-5 h-5" />
         </button>
 
-        <button @click="toggleLanguage" 
+        <button @click="toggleLanguage"
           class="flex items-center gap-2 px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-colors shadow-lg border backdrop-blur-md"
-          :class="isLanding 
-            ? 'bg-white/10 border-white/20 text-white hover:bg-white/20' 
+          :class="isLanding
+            ? 'bg-white/10 border-white/20 text-white hover:bg-white/20'
             : 'bg-arche-green/5 border-arche-green/20 text-arche-green hover:bg-arche-green/10 dark:bg-white/5 dark:border-white/10 dark:text-arche-beige dark:hover:bg-white/10'">
           <Globe class="w-4 h-4" :class="isLanding ? 'drop-shadow-sm' : ''" />
           <span :class="isLanding ? 'drop-shadow-sm' : ''">{{ $i18n.locale }}</span>
@@ -106,7 +106,7 @@ onMounted(() => {
       </div>
 
       <div class="flex md:hidden flex-1 items-center justify-end">
-        <button @click="isMobileMenuOpen = true" 
+        <button @click="isMobileMenuOpen = true"
           class="transition-colors"
           :class="isLanding ? 'text-white drop-shadow-md hover:opacity-70' : 'text-arche-green dark:text-arche-beige hover:opacity-70'">
           <Menu class="w-7 h-7" />
