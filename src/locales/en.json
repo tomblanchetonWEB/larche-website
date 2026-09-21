@@ -23,7 +23,7 @@
     "addressTitle": "Address",
     "address": "14 bis rue Saint Genès\n63000 Clermont-Ferrand",
     "bookingTitle": "Reservations",
-    "phone": "07 81 41 90 35",
+    "phone": "+33 07 81 41 90 35",
     "hoursTitle": "Opening Hours",
     "hours": {
       "d1": "Mon & Sun",
@@ -44,17 +44,18 @@
   "reviews": {
     "title": "Your Reviews",
     "subtitle": "What our customers say about us.",
+    "googleAction": "4.9/5 on Google (180+ reviews)",
     "r1": {
-      "name": "Sophie M.",
-      "text": "Great atmosphere, the specialty coffee is incredible and the place is beautiful."
+      "name": "Simous B.",
+      "text": "We stumbled upon this place by chance and really had a great time. A friendly spot where even the kids could have a good time surrounded by adults. Service with a smile, and the iced tea was really good too."
     },
     "r2": {
-      "name": "Julien T.",
-      "text": "The best spot in Clermont for a drink with friends. Fantastic team!"
+      "name": "Lalie M.",
+      "text": "I loved spending time having a drink with my family. A Nutella waffle at 4 PM and I never left. The evening happy hour with a €4 pint is exceptional. I highly recommend this place."
     },
     "r3": {
-      "name": "Camille L.",
-      "text": "Beautiful decor and signature cocktails to die for. Highly recommend."
+      "name": "Lucas R.",
+      "text": "I had a great time at L’Arche bar! Thanks to the €4 happy hour, we were able to enjoy some great cocktails at a very affordable price. The staff is super friendly, and the atmosphere is by far the best of all the bars in Clermont. I definitely recommend it!"
     }
   },
   "footer": {
@@ -122,6 +123,28 @@
       "title": "3. Liability",
       "p1": "The information broadcast on the site is deemed reliable but is not guaranteed. It is given for informational and general purposes without contractual value.",
       "p2": "L'Arche cannot be held liable for any direct or indirect damage resulting from the use of this site."
+    }
+  },
+  "menuPage": {
+    "title": "Our Menu",
+    "subtitle": "Specialty coffee, signature cocktails, and a curated selection for every moment of the day.",
+    "warning": "Enjoy indoors or on the terrace",
+    "categories": {
+      "coffee": "Coffee & Tea",
+      "cocktails": "Cocktails & Spirits",
+      "wine": "Wine & Beer",
+      "softs": "Soft Drinks & Iced Tea"
+    },
+    "items": {
+      "c1": { "name": "Double Espresso", "desc": "Single origin, artisanal roast.", "price": "2.50" },
+      "c2": { "name": "Latte Macchiato", "desc": "Whole or oat milk, smooth foam.", "price": "4.50" },
+      "c3": { "name": "Cold Brew", "desc": "Slow cold extraction, very refreshing.", "price": "5.00" },
+      "k1": { "name": "Ricard", "desc": "The classic French anise spirit, served chilled.", "price": "3.50" },
+      "k2": { "name": "Moscow Mule", "desc": "Vodka, ginger beer, lime, fresh mint.", "price": "9.00" },
+      "k3": { "name": "L'Arche Signature", "desc": "House-infused gin, rosemary syrup, tonic.", "price": "10.00" },
+      "w1": { "name": "Côtes du Rhône AOC", "desc": "Organic red wine. By the glass (12cl).", "price": "5.00" },
+      "w2": { "name": "Local IPA Pint", "desc": "Craft draft beer, citrus notes (50cl).", "price": "7.50" },
+      "s1": { "name": "Homemade Iced Tea", "desc": "Peach and lemon infusion, lightly sweetened.", "price": "4.50" }
     }
   }
 }

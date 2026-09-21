@@ -1,6 +1,9 @@
 <script setup>
 import { ArrowDown, MapPin, Phone, Clock, Star } from '@lucide/vue'
-import templateImg from '../assets/images/template.webp'
+import heroImg from '../assets/images/hero.webp'
+import atmosphere1Img from '../assets/images/atmosphere-1.jpg'
+import atmosphere2Img from '../assets/images/atmosphere-2.jpg'
+import atmosphere3Img from '../assets/images/atmosphere-3.jpg'
 
 const scrollToInfo = () => {
   const infoSection = document.getElementById('infos')
@@ -25,7 +28,7 @@ const scrollToInfo = () => {
           -webkit-mask-image: var(--fade); mask-image: var(--fade);
         "
       >
-        <img :src="templateImg" alt="Hero" class="w-full h-full object-cover" />
+        <img :src="heroImg" alt="Hero" class="w-full h-full object-cover" />
         <div class="absolute inset-0 bg-black/40"></div>
       </div>
 
@@ -110,10 +113,19 @@ const scrollToInfo = () => {
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-200 md:h-150">
-          <div class="bg-black/10 dark:bg-white/5 rounded-2xl w-full h-full md:col-span-2 md:row-span-2 transition-all duration-300 hover:opacity-90 cursor-pointer"></div>
-          <div class="bg-black/15 dark:bg-white/10 rounded-2xl w-full h-full transition-all duration-300 hover:opacity-90 cursor-pointer"></div>
-          <div class="bg-black/20 dark:bg-white/20 rounded-2xl w-full h-full transition-all duration-300 hover:opacity-90 cursor-pointer"></div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-[800px] md:h-[600px]">
+          <!-- Image 1 (Large, spans 2 columns and 2 rows on desktop) -->
+          <div class="rounded-2xl w-full h-full md:col-span-2 md:row-span-2 transition-all duration-300 hover:opacity-90 cursor-pointer overflow-hidden bg-black/5">
+            <img :src="atmosphere1Img" alt="L'Arche Ambiance 1" class="w-full h-full object-cover" />
+          </div>
+          <!-- Image 2 (Small, top right) -->
+          <div class="rounded-2xl w-full h-full transition-all duration-300 hover:opacity-90 cursor-pointer overflow-hidden bg-black/5">
+            <img :src="atmosphere2Img" alt="L'Arche Ambiance 2" class="w-full h-full object-cover" />
+          </div>
+          <!-- Image 3 (Small, bottom right) -->
+          <div class="rounded-2xl w-full h-full transition-all duration-300 hover:opacity-90 cursor-pointer overflow-hidden bg-black/5">
+            <img :src="atmosphere3Img" alt="L'Arche Ambiance 3" class="w-full h-full object-cover" />
+          </div>
         </div>
 
         <div class="mt-14 flex justify-center">
@@ -148,13 +160,25 @@ const scrollToInfo = () => {
             <div class="flex items-center gap-1">
               <Star v-for="s in 5" :key="s" class="w-4 h-4 fill-arche-green text-arche-green dark:fill-arche-beige dark:text-arche-beige" />
             </div>
-            <p class="font-sans text-base md:text-lg text-gray-800 dark:text-gray-200 italic leading-relaxed grow">
+            <p class="font-sans text-base md:text-lg text-gray-800 dark:text-gray-200 italic leading-relaxed flex-grow">
               "{{ $t(`reviews.r${i}.text`) }}"
             </p>
             <p class="font-sans text-sm md:text-base font-bold text-arche-green dark:text-arche-beige tracking-wide">
               {{ $t(`reviews.r${i}.name`) }}
             </p>
           </div>
+        </div>
+
+        <!-- Google Reviews CTA -->
+        <div class="mt-14 flex justify-center">
+          <a href="https://www.google.com/maps/place/L'arche+bar/@45.7774542,3.0825316,536m/data=!3m1!1e3!4m8!3m7!1s0x47f71bd6df70b777:0xb9b849e9b41c252b!8m2!3d45.7769693!4d3.0852331!9m1!1b1!16s%2Fg%2F11h1l1c7nw?entry=ttu&g_ep=EgoyMDI2MDkxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 text-arche-green dark:text-arche-beige hover:opacity-70 transition-opacity">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0a7.487 7.487 0 0 0-7.487 7.487c0 4.144 7.487 16.513 7.487 16.513s7.488-12.37 7.488-16.513A7.487 7.487 0 0 0 12 0zm0 11.23a3.744 3.744 0 1 1 0-7.487 3.744 3.744 0 0 1 0 7.488z" />
+            </svg>
+            <span class="font-sans text-sm font-bold uppercase tracking-widest border-b border-transparent group-hover:border-current transition-colors pb-0.5">
+              {{ $t('reviews.googleAction') }}
+            </span>
+          </a>
         </div>
       </div>
     </section>

@@ -23,7 +23,7 @@
     "addressTitle": "Adresse",
     "address": "14 bis rue Saint Genès\n63000 Clermont-Ferrand",
     "bookingTitle": "Réservations",
-    "phone": "07 81 41 90 35",
+    "phone": "+33 07 81 41 90 35",
     "hoursTitle": "Horaires",
     "hours": {
       "d1": "Lun & Dim",
@@ -44,17 +44,18 @@
   "reviews": {
     "title": "Vos avis",
     "subtitle": "Ce que nos clients disent de nous.",
+    "googleAction": "4,9/5 sur Google (180+ avis)",
     "r1": {
-      "name": "Sophie M.",
-      "text": "Superbe ambiance, le café de spécialité est incroyable et le lieu est magnifique."
+      "name": "Simous B.",
+      "text": "Nous sommes passés par hasard dans ce lieu et vraiment nous avons passé un super moment. Un endroit convivial où même les enfants ont pu passer un bon moment entouré d adultes. Service avec le sourire,le thé glacé vraiment très bon également."
     },
     "r2": {
-      "name": "Julien T.",
-      "text": "Le meilleur endroit à Clermont pour boire un verre entre amis. Équipe au top !"
+      "name": "Lalie M.",
+      "text": "j’ai adoré passer un moment avec ma famille pour boire un verre. Une gaufre au Nutella à 16h et je ne suis jamais repartie. Le soir en happy hour avec une pinte à 4€ c’est exceptionnel. Je vous conseille vraiment cet endroit."
     },
     "r3": {
-      "name": "Camille L.",
-      "text": "Déco soignée et cocktails signatures à tomber par terre. Je recommande vivement."
+      "name": "Lucas R.",
+      "text": "J’ai passé un super moment au bar L’Arche ! Grâce à l’happy hour à 4 €, on a pu profiter de super cocktails à un prix très abordable. L’équipe est très sympathique et l’ambiance est de loin la meilleure de tous les bars de Clermont. Je recommande sans hésiter !"
     }
   },
   "footer": {
@@ -122,6 +123,28 @@
       "title": "3. Responsabilité",
       "p1": "Les informations diffusées sur le site sont réputées fiables mais ne bénéficient d'aucune garantie. Elles sont données à titre indicatif et général sans valeur contractuelle.",
       "p2": "L'Arche ne pourra être tenu responsable des dommages directs ou indirects résultant de l'utilisation de ce site."
+    }
+  },
+  "menuPage": {
+    "title": "La Carte",
+    "subtitle": "Café de spécialité, cocktails signatures et sélection pointue pour chaque moment de la journée.",
+    "warning": "À déguster sur place ou en terrasse",
+    "categories": {
+      "coffee": "Café & Thé",
+      "cocktails": "Cocktails & Spiritueux",
+      "wine": "Vins & Bières",
+      "softs": "Softs & Thés Glacés"
+    },
+    "items": {
+      "c1": { "name": "Espresso Double", "desc": "Pure origine, torréfaction artisanale.", "price": "2.50" },
+      "c2": { "name": "Latte Macchiato", "desc": "Lait entier ou avoine, mousse onctueuse.", "price": "4.50" },
+      "c3": { "name": "Cold Brew", "desc": "Infusion lente à froid, rafraîchissant.", "price": "5.00" },
+      "k1": { "name": "Ricard", "desc": "Le grand classique anisé, servi bien frais (2cl).", "price": "3.50" },
+      "k2": { "name": "Moscow Mule", "desc": "Vodka, ginger beer, citron vert, menthe fraîche.", "price": "9.00" },
+      "k3": { "name": "Signature L'Arche", "desc": "Gin infusé maison, sirop de romarin, tonic.", "price": "10.00" },
+      "w1": { "name": "Côtes du Rhône AOC", "desc": "Vin rouge bio. Le verre (12cl).", "price": "5.00" },
+      "w2": { "name": "Pinte IPA Locale", "desc": "Bière pression artisanale, notes d'agrumes (50cl).", "price": "7.50" },
+      "s1": { "name": "Thé Glacé Maison", "desc": "Infusion pêche et citron, très peu sucré.", "price": "4.50" }
     }
   }
 }
