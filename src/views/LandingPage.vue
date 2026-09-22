@@ -16,7 +16,7 @@ const scrollToInfo = () => {
 <template>
   <div class="w-full flex flex-col">
     <!-- Hero Section -->
-    <section class="relative w-full h-[100dvh] flex flex-col items-center justify-center md:justify-end pt-24 pb-0 md:pt-0 md:pb-32 overflow-hidden bg-arche-beige dark:bg-surface-dark transition-colors duration-300">
+    <section class="relative w-full h-dvh flex flex-col items-center justify-center md:justify-end pt-24 pb-0 md:pt-0 md:pb-32 overflow-hidden bg-arche-beige dark:bg-surface-dark transition-colors duration-300">
 
       <div
         class="absolute inset-0 z-0"
@@ -38,17 +38,14 @@ const scrollToInfo = () => {
       ></div>
 
       <div class="relative z-30 text-center flex flex-col items-center px-4 w-full">
-        <!-- Le titre est inchangé, toujours centré -->
         <h1 class="font-display text-5xl md:text-7xl text-white tracking-tight mb-5 drop-shadow-lg uppercase">
           {{ $t('hero.title') }}
         </h1>
 
-        <!-- Le sous-titre est inchangé -->
         <p class="text-white/90 font-sans text-base md:text-lg max-w-xl drop-shadow-md mb-10 font-light leading-relaxed tracking-wide">
           {{ $t('hero.subtitle') }}
         </p>
 
-        <!-- Le bouton est inchangé -->
         <button @click="scrollToInfo" class="flex items-center gap-3 px-8 py-4 rounded-full font-sans text-sm font-bold uppercase tracking-widest transition-all duration-300 shadow-xl border backdrop-blur-md bg-white/10 border-white/20 text-white hover:bg-white/20 hover:scale-105">
           <span>{{ $t('hero.cta') }}</span>
           <ArrowDown class="w-4 h-4" />
