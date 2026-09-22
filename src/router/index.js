@@ -51,11 +51,11 @@ const routes = [
     component: TermsPage,
     meta: { titleKey: 'pageTitle.terms' },
   },
-  {
-    path: '/:pathMatch(.*)*',
-    name: 'NotFound',
-    redirect: '/',
-  },
+  // {
+  //   path: '/:pathMatch(.*)*',
+  //   name: 'NotFound',
+  //   redirect: '/',
+  // },
 ]
 
 export const router = createRouter({
