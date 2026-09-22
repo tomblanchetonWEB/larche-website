@@ -15,9 +15,10 @@ const scrollToInfo = () => {
 
 <template>
   <div class="w-full flex flex-col">
-    <!-- Hero Section -->
-    <section class="relative w-full h-[100dvh] flex flex-col justify-end pb-32 md:pb-40 overflow-hidden bg-arche-beige dark:bg-surface-dark transition-colors duration-300">
+<!-- Hero Section -->
+    <section class="relative w-full h-[100dvh] flex flex-col pb-0 md:justify-end md:pb-32 overflow-hidden bg-arche-beige dark:bg-surface-dark transition-colors duration-300">
 
+      <!-- Background Image & Overlay -->
       <div
         class="absolute inset-0 z-0"
         style="
@@ -32,24 +33,27 @@ const scrollToInfo = () => {
         <div class="absolute inset-0 bg-black/40"></div>
       </div>
 
+      <!-- Noise Texture -->
       <div
         class="absolute inset-0 z-10 pointer-events-none opacity-[0.035] mix-blend-overlay"
         style="background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii45Ii8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+');"
       ></div>
 
-      <!-- Nouvelle disposition Éditoriale -->
-      <div class="relative z-30 flex flex-col items-start px-8 md:px-16 w-full max-w-7xl mx-auto">
+      <!-- Content Container -->
+      <div class="relative z-30 flex flex-col items-center w-full h-full md:h-auto px-4 max-w-7xl mx-auto">
         
-        <!-- Titre : Centré -->
-        <div class="w-full text-center mb-10 md:mb-12">
-          <h1 class="font-display text-6xl md:text-8xl lg:text-9xl text-white tracking-tight drop-shadow-lg uppercase leading-none">
-            {{ $t('hero.title') }}
-          </h1>
-        </div>
+        <!-- Espaceur haut (Uniquement sur mobile) pour pousser le titre au centre -->
+        <div class="flex-1 md:hidden"></div>
 
-        <!-- Sous-titre et CTA : Alignés à gauche -->
-        <div class="flex flex-col items-start gap-8 max-w-xl">
-          <p class="text-white/95 font-sans text-lg md:text-xl drop-shadow-md font-light leading-relaxed tracking-wide text-left">
+        <!-- Titre : Parfaitement au centre sur mobile -->
+        <h1 class="font-display text-5xl md:text-7xl text-white tracking-tight drop-shadow-lg uppercase text-center">
+          {{ $t('hero.title') }}
+        </h1>
+
+        <!-- Sous-titre & CTA : En dessous du titre -->
+        <!-- flex-1 sur mobile permet d'équilibrer l'espaceur du haut -->
+        <div class="flex-1 md:flex-none flex flex-col items-center justify-start w-full max-w-xl pt-6 md:pt-5">
+          <p class="text-white/90 font-sans text-base md:text-lg drop-shadow-md mb-10 font-light leading-relaxed tracking-wide text-center">
             {{ $t('hero.subtitle') }}
           </p>
 
