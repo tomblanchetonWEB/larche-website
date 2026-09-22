@@ -16,9 +16,7 @@ const scrollToInfo = () => {
 <template>
   <div class="w-full flex flex-col">
     <!-- Hero Section -->
-    <!-- Utilisation de h-[100dvh] pour s'adapter à la barre mobile de Safari/Chrome -->
-    <!-- justify-center sur mobile, md:justify-end sur desktop -->
-    <section class="relative w-full h-[100dvh] flex flex-col items-center justify-center md:justify-end pb-0 md:pb-32 overflow-hidden bg-arche-beige dark:bg-surface-dark transition-colors duration-300">
+    <section class="relative w-full h-[100dvh] flex flex-col justify-end pb-32 md:pb-40 overflow-hidden bg-arche-beige dark:bg-surface-dark transition-colors duration-300">
 
       <div
         class="absolute inset-0 z-0"
@@ -39,19 +37,28 @@ const scrollToInfo = () => {
         style="background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii45Ii8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+');"
       ></div>
 
-      <div class="relative z-30 text-center flex flex-col items-center px-4 w-full">
-        <h1 class="font-display text-5xl md:text-7xl text-white tracking-tight mb-5 drop-shadow-lg uppercase">
-          {{ $t('hero.title') }}
-        </h1>
+      <!-- Nouvelle disposition Éditoriale -->
+      <div class="relative z-30 flex flex-col items-start px-8 md:px-16 w-full max-w-7xl mx-auto">
+        
+        <!-- Titre : Centré -->
+        <div class="w-full text-center mb-10 md:mb-12">
+          <h1 class="font-display text-6xl md:text-8xl lg:text-9xl text-white tracking-tight drop-shadow-lg uppercase leading-none">
+            {{ $t('hero.title') }}
+          </h1>
+        </div>
 
-        <p class="text-white/90 font-sans text-base md:text-lg max-w-xl drop-shadow-md mb-10 font-light leading-relaxed tracking-wide">
-          {{ $t('hero.subtitle') }}
-        </p>
+        <!-- Sous-titre et CTA : Alignés à gauche -->
+        <div class="flex flex-col items-start gap-8 max-w-xl">
+          <p class="text-white/95 font-sans text-lg md:text-xl drop-shadow-md font-light leading-relaxed tracking-wide text-left">
+            {{ $t('hero.subtitle') }}
+          </p>
 
-        <button @click="scrollToInfo" class="flex items-center gap-3 px-8 py-4 rounded-full font-sans text-sm font-bold uppercase tracking-widest transition-all duration-300 shadow-xl border backdrop-blur-md bg-white/10 border-white/20 text-white hover:bg-white/20 hover:scale-105">
-          <span>{{ $t('hero.cta') }}</span>
-          <ArrowDown class="w-4 h-4" />
-        </button>
+          <button @click="scrollToInfo" class="flex items-center gap-3 px-8 py-4 rounded-full font-sans text-sm font-bold uppercase tracking-widest transition-all duration-300 shadow-xl border backdrop-blur-md bg-white/10 border-white/20 text-white hover:bg-white/20 hover:scale-105">
+            <span>{{ $t('hero.cta') }}</span>
+            <ArrowDown class="w-4 h-4" />
+          </button>
+        </div>
+
       </div>
     </section>
 
@@ -168,6 +175,7 @@ const scrollToInfo = () => {
           </div>
         </div>
 
+        <!-- Google Reviews CTA -->
         <div class="mt-14 flex justify-center">
           <a href="https://www.google.com/maps/place/L'arche+bar/@45.7774542,3.0825316,536m/data=!3m1!1e3!4m8!3m7!1s0x47f71bd6df70b777:0xb9b849e9b41c252b!8m2!3d45.7769693!4d3.0852331!9m1!1b1!16s%2Fg%2F11h1l1c7nw?entry=ttu&g_ep=EgoyMDI2MDkxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 text-arche-green dark:text-arche-beige hover:opacity-70 transition-opacity">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
