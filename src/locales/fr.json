@@ -147,7 +147,7 @@
       "s1": { "name": "Thé Glacé Maison", "desc": "Infusion pêche et citron, très peu sucré.", "price": "4.50" }
     }
   },
-"storyPage": {
+  "storyPage": {
     "title": "Notre Histoire",
     "subtitle": "Un tiers-lieu urbain au cœur de Clermont-Ferrand.",
     "tagline": "Le Fondateur",
@@ -158,5 +158,12 @@
     "quote": "« Le quartier est très beau, il représente bien la ville je trouve. »",
     "imageAlt1": "Noé De La Rochette, fondateur de L'Arche",
     "imageAlt2": "L'ambiance du bar"
+  },
+  "eventsPage": {
+    "title": "Événements",
+    "subtitle": "La programmation arrive très bientôt.",
+    "description": "Nous préparons un calendrier d'événements pour faire vibrer le quartier : DJ sets, soirées thématiques, dégustations... Restez à l'écoute.",
+    "qrTitle": "En attendant, découvrez notre carte",
+    "qrScan": "Scannez ou cliquez ici"
   }
 }

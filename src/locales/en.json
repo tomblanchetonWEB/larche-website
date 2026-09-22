@@ -158,5 +158,12 @@
     "quote": "\"The neighborhood is very beautiful, it represents the city well I think.\"",
     "imageAlt1": "Noé De La Rochette, founder of L'Arche",
     "imageAlt2": "The bar atmosphere"
+  },
+  "eventsPage": {
+    "title": "Events",
+    "subtitle": "Our programming is coming very soon.",
+    "description": "We are preparing a calendar of events to bring the neighborhood to life: DJ sets, theme nights, tastings... Stay tuned.",
+    "qrTitle": "In the meantime, discover our menu",
+    "qrScan": "Scan or click here"
   }
 }
