@@ -15,10 +15,9 @@ const scrollToInfo = () => {
 
 <template>
   <div class="w-full flex flex-col">
-<!-- Hero Section -->
-    <section class="relative w-full h-[100dvh] flex flex-col pb-0 md:justify-end md:pb-32 overflow-hidden bg-arche-beige dark:bg-surface-dark transition-colors duration-300">
+    <!-- Hero Section -->
+    <section class="relative w-full h-[100dvh] flex flex-col items-center justify-center md:justify-end pt-24 pb-0 md:pt-0 md:pb-32 overflow-hidden bg-arche-beige dark:bg-surface-dark transition-colors duration-300">
 
-      <!-- Background Image & Overlay -->
       <div
         class="absolute inset-0 z-0"
         style="
@@ -33,36 +32,27 @@ const scrollToInfo = () => {
         <div class="absolute inset-0 bg-black/40"></div>
       </div>
 
-      <!-- Noise Texture -->
       <div
         class="absolute inset-0 z-10 pointer-events-none opacity-[0.035] mix-blend-overlay"
         style="background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii45Ii8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+');"
       ></div>
 
-      <!-- Content Container -->
-      <div class="relative z-30 flex flex-col items-center w-full h-full md:h-auto px-4 max-w-7xl mx-auto">
-        
-        <!-- Espaceur haut (Uniquement sur mobile) pour pousser le titre au centre -->
-        <div class="flex-1 md:hidden"></div>
-
-        <!-- Titre : Parfaitement au centre sur mobile -->
-        <h1 class="font-display text-5xl md:text-7xl text-white tracking-tight drop-shadow-lg uppercase text-center">
+      <div class="relative z-30 text-center flex flex-col items-center px-4 w-full">
+        <!-- Le titre est inchangé, toujours centré -->
+        <h1 class="font-display text-5xl md:text-7xl text-white tracking-tight mb-5 drop-shadow-lg uppercase">
           {{ $t('hero.title') }}
         </h1>
 
-        <!-- Sous-titre & CTA : En dessous du titre -->
-        <!-- flex-1 sur mobile permet d'équilibrer l'espaceur du haut -->
-        <div class="flex-1 md:flex-none flex flex-col items-center justify-start w-full max-w-xl pt-6 md:pt-5">
-          <p class="text-white/90 font-sans text-base md:text-lg drop-shadow-md mb-10 font-light leading-relaxed tracking-wide text-center">
-            {{ $t('hero.subtitle') }}
-          </p>
+        <!-- Le sous-titre est inchangé -->
+        <p class="text-white/90 font-sans text-base md:text-lg max-w-xl drop-shadow-md mb-10 font-light leading-relaxed tracking-wide">
+          {{ $t('hero.subtitle') }}
+        </p>
 
-          <button @click="scrollToInfo" class="flex items-center gap-3 px-8 py-4 rounded-full font-sans text-sm font-bold uppercase tracking-widest transition-all duration-300 shadow-xl border backdrop-blur-md bg-white/10 border-white/20 text-white hover:bg-white/20 hover:scale-105">
-            <span>{{ $t('hero.cta') }}</span>
-            <ArrowDown class="w-4 h-4" />
-          </button>
-        </div>
-
+        <!-- Le bouton est inchangé -->
+        <button @click="scrollToInfo" class="flex items-center gap-3 px-8 py-4 rounded-full font-sans text-sm font-bold uppercase tracking-widest transition-all duration-300 shadow-xl border backdrop-blur-md bg-white/10 border-white/20 text-white hover:bg-white/20 hover:scale-105">
+          <span>{{ $t('hero.cta') }}</span>
+          <ArrowDown class="w-4 h-4" />
+        </button>
       </div>
     </section>
 
@@ -179,7 +169,6 @@ const scrollToInfo = () => {
           </div>
         </div>
 
-        <!-- Google Reviews CTA -->
         <div class="mt-14 flex justify-center">
           <a href="https://www.google.com/maps/place/L'arche+bar/@45.7774542,3.0825316,536m/data=!3m1!1e3!4m8!3m7!1s0x47f71bd6df70b777:0xb9b849e9b41c252b!8m2!3d45.7769693!4d3.0852331!9m1!1b1!16s%2Fg%2F11h1l1c7nw?entry=ttu&g_ep=EgoyMDI2MDkxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 text-arche-green dark:text-arche-beige hover:opacity-70 transition-opacity">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
