@@ -16,7 +16,9 @@ const scrollToInfo = () => {
 <template>
   <div class="w-full flex flex-col">
     <!-- Hero Section -->
-    <section class="relative w-full h-screen flex flex-col items-center justify-end pb-24 md:pb-32 overflow-hidden bg-arche-beige dark:bg-surface-dark transition-colors duration-300">
+    <!-- Utilisation de h-[100dvh] pour s'adapter à la barre mobile de Safari/Chrome -->
+    <!-- justify-center sur mobile, md:justify-end sur desktop -->
+    <section class="relative w-full h-[100dvh] flex flex-col items-center justify-center md:justify-end pb-0 md:pb-32 overflow-hidden bg-arche-beige dark:bg-surface-dark transition-colors duration-300">
 
       <div
         class="absolute inset-0 z-0"
@@ -114,15 +116,12 @@ const scrollToInfo = () => {
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-200 md:h-150">
-          <!-- Image 1 (Large, spans 2 columns and 2 rows on desktop) -->
           <div class="rounded-2xl w-full h-full md:col-span-2 md:row-span-2 transition-all duration-300 hover:opacity-90 cursor-pointer overflow-hidden bg-black/5">
             <img :src="atmosphere1Img" alt="L'Arche Ambiance 1" class="w-full h-full object-cover" />
           </div>
-          <!-- Image 2 (Small, top right) -->
           <div class="rounded-2xl w-full h-full transition-all duration-300 hover:opacity-90 cursor-pointer overflow-hidden bg-black/5">
             <img :src="atmosphere2Img" alt="L'Arche Ambiance 2" class="w-full h-full object-cover" />
           </div>
-          <!-- Image 3 (Small, bottom right) -->
           <div class="rounded-2xl w-full h-full transition-all duration-300 hover:opacity-90 cursor-pointer overflow-hidden bg-black/5">
             <img :src="atmosphere3Img" alt="L'Arche Ambiance 3" class="w-full h-full object-cover" />
           </div>
@@ -169,7 +168,6 @@ const scrollToInfo = () => {
           </div>
         </div>
 
-        <!-- Google Reviews CTA -->
         <div class="mt-14 flex justify-center">
           <a href="https://www.google.com/maps/place/L'arche+bar/@45.7774542,3.0825316,536m/data=!3m1!1e3!4m8!3m7!1s0x47f71bd6df70b777:0xb9b849e9b41c252b!8m2!3d45.7769693!4d3.0852331!9m1!1b1!16s%2Fg%2F11h1l1c7nw?entry=ttu&g_ep=EgoyMDI2MDkxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 text-arche-green dark:text-arche-beige hover:opacity-70 transition-opacity">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
